@@ -8,26 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="navbar">
-  <div class="nav-left">
-    <a href="/" class="logo">Home</a>
-  </div>
-
-    <ul class="nav-links">
-      <li><a href="/route-66-centennial">Route 66 Centennial</a></li>
-      <li class="dropdown">
-        <a href="#">Projects ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="/route-66-centennial">Route 66 Centennial</a></li>
-          <li><a href="/washington">Washington</a></li>
-          <li><a href="/new-york">New York</a></li>
-          <li><a href="/ultras">Ultras</a></li>
-        </ul>
-      </li>
-      <li><a href="/about">About Me</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+<div id="navbar-placeholder"></div>
+  
 <div class="page-banner">
   Route 66 Centennial
 </div>
@@ -47,5 +29,14 @@
     <p>More content here.</p>
   </div>
 </div>
+
+  <script>
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+  </script>
 </body>
 </html>
