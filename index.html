@@ -4,7 +4,14 @@
   <link rel="stylesheet" href="/css/styles.css">
   <meta charset="UTF-8">
   <title>Zach Fiske</title>
-  <link rel="icon" type="image/webp" href="/images/route-66-sign.webp">
+  <script>
+    fetch('/favicon.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.error('Error loading favicon:', err));
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
