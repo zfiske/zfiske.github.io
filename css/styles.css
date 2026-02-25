@@ -79,12 +79,18 @@ body {
 /* FULL-WIDTH PAGE BANNER */
 
 .page-banner {
-  width: 100%;
-  padding: 80px 20px;
+  width: 100vw;           /* viewport width */
+  height: 100vh;          /* full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #eee;
-  text-align: center;
   font-size: 36px;
   font-weight: bold;
+  margin: 0;
+  padding: 0 2rem;        /* optional small horizontal padding */
+  overflow-x: hidden;
+  text-align: center;
 }
 
 /* SIDE-BY-SIDE SECTION */
