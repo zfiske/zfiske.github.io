@@ -32,7 +32,7 @@ body {
 
 /* Initially hidden */
 .dropdown-menu {
-  margin-top: 5px;
+  margin-top: 50px;
   opacity: 0;
   visibility: hidden;   /* element is invisible but still hoverable */
   transition: opacity 0.2s ease;
