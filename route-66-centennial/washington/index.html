@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8">
+  <title>Washington - Zach Fiske</title>
+  <link rel="icon" type="image/webp" href="/images/route-66-sign.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+  
+<div class="page-banner">
+  Route 66 Centennial
+</div>
+
+<div class="section">
+  <img src="images/photo1.webp" alt="">
+  <div class="section-text">
+    <h2>Section One</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+
+<div class="section reverse">
+  <img src="images/photo2.webp" alt="">
+  <div class="section-text">
+    <h2>Section Two</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+
+  <script>
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</body>
+</html>
