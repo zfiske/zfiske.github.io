@@ -32,16 +32,15 @@ body {
 
 /* Initially hidden */
 .dropdown-menu {
-  margin-top: 50px;
-  opacity: 0;
-  visibility: hidden;   /* element is invisible but still hoverable */
-  transition: opacity 0.2s ease;
   position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none; /* prevents clicks when hidden */
+  transition: opacity 0.2s ease;
   background: #222;
   list-style: none;
   padding: 10px 0;
-  top: 100%;
-  left: 0;
   min-width: 180px;
   z-index: 1000;
 }
@@ -49,7 +48,7 @@ body {
 /* Show menu on hover */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
-  visibility: visible;
+  pointer-events: auto; /* allows clicks when visible */
 }
 
 /* Dropdown items */
