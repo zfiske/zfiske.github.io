@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #222;
+  list-style: none;
+  padding: 10px;
+  top: 30px;
+  left: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* FULL-WIDTH PAGE BANNER */
+
+.page-banner {
+  width: 100%;
+  padding: 80px 20px;
+  background: #eee;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* SIDE-BY-SIDE SECTION */
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 50px;
+}
+
+.section img {
+  width: 50%;
+  height: auto;
+}
+
+.section-text {
+  width: 50%;
+  font-size: 18px;
+}
+
+/* ALTERNATE LAYOUT */
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
