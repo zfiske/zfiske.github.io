@@ -92,7 +92,7 @@ body {
 
 .page-banner img {
   width: 100%;
-  height: 100%;
+  height: 40%;
   object-fit: cover;     /* makes it behave like a background image */
   display: block;
 }
