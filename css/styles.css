@@ -118,10 +118,15 @@ body {
   flex-wrap: wrap;     /* allow stacking on small screens */
 }
 
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .section img,
 .section-text {
-  flex: 1 1 45%;  /* flex-grow, flex-shrink, basis */
-  max-width: 100%; /* prevent overflow */
+  flex: 1 1 50%;
 }
 
 /* ALTERNATE LAYOUT */
