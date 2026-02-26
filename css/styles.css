@@ -13,12 +13,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: #000;
   padding: 15px 40px;
 }
 
 .navbar a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ body {
 
 /* Dropdown items */
 .dropdown-menu li {
-  padding: 8px 20px;
+/*  padding: 8px 20px; */
 }
 
 /* Full-row clickable links */
