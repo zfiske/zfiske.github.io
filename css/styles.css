@@ -42,11 +42,11 @@ body {
 
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50px);
+  transform: translateY(-2px);
 
   transition: 
-    opacity 0.2s ease 0.5s,      /* 0.5s delay BEFORE fade out */
-    transform 0.2s ease 0.5s;
+    opacity 0.2s,
+    transform 0.2s;
 
   background: #222;
   list-style: none;
