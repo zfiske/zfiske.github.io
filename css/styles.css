@@ -30,33 +30,39 @@ body {
 }
 
 /* Dropdown container */
-/* Dropdown container */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown menu (initially hidden) */
+/* Hidden state */
 .dropdown-menu {
   position: absolute;
-  top: 100%;               /* directly below parent li */
+  top: 100%;
   left: 0;
-  opacity: 0;              /* fully transparent */
-  pointer-events: none;    /* ignore mouse when hidden */
-  transform: translateY(5px); /* small downward offset for fade effect */
-  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(5px);
+
+  transition: 
+    opacity 0.2s ease 0.5s,      /* 0.5s delay BEFORE fade out */
+    transform 0.2s ease 0.5s;
+
   background: #222;
   list-style: none;
   padding: 10px 0;
   min-width: 180px;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* subtle shadow */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/* Show menu on hover */
+/* Visible state */
 .dropdown:hover .dropdown-menu {
-  opacity: 1;               /* fade in */
-  pointer-events: auto;     /* allow clicks */
-  transform: translateY(0); /* slide up into place */
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+
+  transition-delay: 0s;   /* fade in immediately */
 }
 
 /* Dropdown items */
