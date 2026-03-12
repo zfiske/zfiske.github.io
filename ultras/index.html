@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8">
+  <title>Ultras - Zach Fiske</title>
+  <script>
+    fetch('/favicon.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.error('Error loading favicon:', err));
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+  
+<div class="page-banner">
+  <img src="/images/i-ultras/pemi-golden.jpg" alt="">
+  <div class="banner-text">Ultras</div>
+</div>
+  
+<div class="section">
+  <img src="/images/photo1.webp" alt="">
+  <div class="section-text">
+    <h2>Javelina</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+
+<div class="section reverse">
+  <img src="/images/photo2.webp" alt="">
+  <div class="section-text">
+    <h2>Leadville</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="section">
+  <img src="/images/photo1.webp" alt="">
+  <div class="section-text">
+    <h2>Pemi</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+
+<div class="section reverse">
+  <img src="/images/photo2.webp" alt="">
+  <div class="section-text">
+    <h2>JFK</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+  <script>
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</body>
+</html>
