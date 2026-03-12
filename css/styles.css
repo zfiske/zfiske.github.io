@@ -113,7 +113,7 @@ body {
   align-items: stretch;      /* make both sides same height */
   padding: 60px 5%;
   gap: 2rem;
-  flex-wrap: wrap;           /* allow stacking on small screens */
+ /* flex-wrap: wrap;           /* allow stacking on small screens */
 }
 
 .section img {
