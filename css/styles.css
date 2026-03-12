@@ -108,6 +108,16 @@ body {
   text-align: center;
 }
 
+.banner-auto {
+  height: auto;
+}
+
+.banner-auto img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
 .section {
   display: flex;
   align-items: stretch;      /* make both sides same height */
