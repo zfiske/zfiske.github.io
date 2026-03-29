@@ -172,3 +172,18 @@ h1, h2, h3 {
 .section.full-text img {
   display: none;
 }
+
+/* Make the iframe behave like the image in the flex layout */
+.map-wrapper {
+  flex: 0 0 50%;      /* same as your image width */
+  width: 50%;
+  height: auto;
+  min-height: 300px;  /* set a reasonable height */
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
