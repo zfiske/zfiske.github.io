@@ -178,7 +178,7 @@ h1, h2, h3 {
   flex: 0 0 50%;      /* same as your image width */
   width: 50%;
   height: auto;
-  min-height: 600px;  /* set a reasonable height */
+  min-height: 300px;  /* set a reasonable height */
 }
 
 .map-wrapper iframe {
