@@ -176,9 +176,9 @@ h1, h2, h3 {
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
   flex: 0 0 50%;      /* same as your image width */
-  width: 50%;
-  height: auto;
-  min-height: 300px;  /* set a reasonable height */
+  display: flex;       /* enable centering inside */
+  justify-content: center; /* center iframe horizontally */
+  align-items: center;     /* center iframe vertically if needed */
 }
 
 .map-wrapper iframe {
