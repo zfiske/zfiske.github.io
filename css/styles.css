@@ -127,7 +127,7 @@ h1, h2, h3 {
 
 .section {
   display: flex;
-  align-items: flex-start;      /* make both sides same height */
+  align-items: center; 
   padding: 60px 5%;
   gap: 2rem;
  /* flex-wrap: wrap;           /* allow stacking on small screens */
@@ -158,13 +158,14 @@ h1, h2, h3 {
 /* TEXT-ONLY FULL-WIDTH SECTION */
 .section.full-text {
   display: block;        /* remove flex layout */
-  padding: 60px 10%;     /* slightly wider readable margins */
+  padding: 60px 0;     /* slightly wider readable margins */
 }
 
 .section.full-text .section-text {
   width: 100%;
   max-width: 900px;      /* keeps text readable */
   margin: 0 auto;        /* center it */
+  padding: 0 20px;   /* small inner padding */
 }
 
 /* Hide image if present */
