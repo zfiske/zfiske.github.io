@@ -154,3 +154,20 @@ h1, h2, h3 {
 .section.reverse {
   flex-direction: row-reverse;
 }
+
+/* TEXT-ONLY FULL-WIDTH SECTION */
+.section.full-text {
+  display: block;        /* remove flex layout */
+  padding: 60px 10%;     /* slightly wider readable margins */
+}
+
+.section.full-text .section-text {
+  width: 100%;
+  max-width: 900px;      /* keeps text readable */
+  margin: 0 auto;        /* center it */
+}
+
+/* Hide image if present */
+.section.full-text img {
+  display: none;
+}
