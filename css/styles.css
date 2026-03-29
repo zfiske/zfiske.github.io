@@ -127,7 +127,7 @@ h1, h2, h3 {
 
 .section {
   display: flex;
-  align-items: stretch;      /* make both sides same height */
+  align-items: flex-start;      /* make both sides same height */
   padding: 60px 5%;
   gap: 2rem;
  /* flex-wrap: wrap;           /* allow stacking on small screens */
