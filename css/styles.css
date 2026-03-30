@@ -1,9 +1,9 @@
 body {
-  background: white;
+  background: black;
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.6;
-  color: #222;
+  color: #fff;
 }
 
 h1, h2, h3 {
@@ -130,7 +130,12 @@ h1, h2, h3 {
   align-items: center; 
   padding: 60px 5%;
   gap: 2rem;
+  transition: background-color 0.3s ease; /* smooth effect */
  /* flex-wrap: wrap;           /* allow stacking on small screens */
+}
+
+.section:hover {
+  background-color: #2a2a2a;
 }
 
 .section img {
