@@ -9,7 +9,7 @@ body {
 h1, h2, h3 {
   /* font-family: "Lora", serif; */
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 2px;         /* cinematic spacing */
+ /* letter-spacing: 2px;         /* cinematic spacing */
   text-transform: uppercase;
 }
 
@@ -120,6 +120,9 @@ h1, h2, h3 {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;         /* cinematic spacing */
+  text-transform: uppercase;
 }
 
 .banner-auto {
