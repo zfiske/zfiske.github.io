@@ -158,7 +158,7 @@ h1, h2, h3 {
 /* TEXT-ONLY FULL-WIDTH SECTION */
 .section.full-text {
   display: block;        /* remove flex layout */
-  padding: 60px 0;     /* slightly wider readable margins */
+  padding: 60px 5%;     /* slightly wider readable margins */
 }
 
 .section.full-text .section-text {
