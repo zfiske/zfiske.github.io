@@ -13,6 +13,20 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+/* hyperlinks */
+a {
+  color: #36e336; /* light green */
+  text-decoration: none; /* optional: removes underline */
+}
+
+a:visited {
+  color: #36e336; /* keeps it from turning purple */
+}
+
+a:hover {
+  color: #90ee90; /* slightly brighter on hover */
+}
+
 * {
   box-sizing: border-box;
 }
