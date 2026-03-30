@@ -7,7 +7,10 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Lora", serif;
+  /* font-family: "Lora", serif; */
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;         /* cinematic spacing */
+  text-transform: uppercase;
 }
 
 * {
@@ -24,9 +27,13 @@ h1, h2, h3 {
   padding: 15px 40px;
 }
 
+}
 .navbar a {
   color: white;
   text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1.5px;
+  font-size: 20px;
 }
 
 .nav-links {
