@@ -132,10 +132,9 @@ a:hover {
   transform: translate(-50%, -50%);
   color: white;
   font-size: 48px;
-  font-weight: bold;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 2px;         /* cinematic spacing */
+  letter-spacing: 4px;         /* very cinematic spacing */
   text-transform: uppercase;
 }
 
