@@ -18,7 +18,8 @@
 </head>
 <body>
 <div id="navbar-placeholder"></div>
-
+<main>
+  
 <div class="section">
   <img src="/images/i-ultras/javelina-paid-zoomed.jpg" alt="Zach running in the desert in a Frodo cape at the 2025 Javeline Jundred" title="2025 Javelina Jundred (Photo credit: Howie Stern Photography)">
   <div class="section-text">
@@ -35,10 +36,17 @@
     })
     .catch(error => console.error('Error loading navbar:', error));
   </script>
+  </main>
 
-<footer class="site-footer">
-  <p>© 2026 Zachary Fiske | All rights reserved.</p>
-</footer>
   
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
