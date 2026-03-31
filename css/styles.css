@@ -134,7 +134,7 @@ a:hover {
   font-size: 48px;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 4px;         /* very cinematic spacing */
+  letter-spacing: 12px;         /* very cinematic spacing */
   text-transform: uppercase;
 }
 
