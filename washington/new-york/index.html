@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>New York - Zach Fiske</title>
+  <script>
+    fetch('/favicon.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.error('Error loading favicon:', err));
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/westport-pier.jpg" alt="">
+  <div class="banner-text">New York</div>
+</div>
+  
+<div class="section">
+  <img src="/images/i-washington/westport-lighthouse.jpg" alt="">
+  <div class="section-text">
+    <h2>Niagara Falls</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/tree-tunnel.jpg" alt="">
+</div>
+
+<div class="section reverse">
+  <img src="/images/i-washington/lake-sylvia.jpg" alt="">
+  <div class="section-text">
+    <h2>Lockport</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/lake-sylvia-log-jump.jpg" alt="">
+</div>
+
+<div class="section">
+  <img src="/images/i-washington/capitol-state-water-refill.jpg" alt="">
+  <div class="section-text">
+    <h2>Erie Canal</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+
+<div class="page-banner">
+  <img src="/images/i-washington/capitol-reinier.jpg" alt="">
+</div>
+  
+<div class="section reverse">
+  <img src="/images/i-washington/seattle-bike-path.jpg" alt="">
+  <div class="section-text">
+    <h2>Montezuma</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/cascades-rail-bridge.jpg" alt="">
+</div>
+  
+<div class="section">
+  <img src="/images/i-washington/snoqualmie-tunnel.jpg" alt="">
+  <div class="section-text">
+    <h2>Canajoharie</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/keechelus-lake.jpg" alt="">
+</div>
+
+<div class="section reverse">
+  <img src="/images/i-washington/cle-elum.jpg" alt="">
+  <div class="section-text">
+    <h2>Albany</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/ellsworth-farm.jpg" alt="">
+</div>
+
+<div class="section">
+  <img src="/images/i-washington/renslow-viaduct.jpg" alt="">
+  <div class="section-text">
+    <h2>Hudson</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/crazy-cloud.jpg" alt="">
+</div>
+
+<div class="section reverse">
+  <img src="/images/i-washington/beverly-dunes.jpg" alt="">
+  <div class="section-text">
+    <h2>Breakneck Ridge</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/beverly-sunrise.jpg" alt="">
+</div>
+  
+<div class="section">
+  <img src="/images/i-washington/othello-farmland.jpg" alt="">
+  <div class="section-text">
+    <h2>Peekskill</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/cow-creek-crossing.webp" alt="">
+</div>
+
+<div class="section reverse">
+  <img src="/images/i-washington/tumbleweed-migration.jpg" alt="">
+  <div class="section-text">
+    <h2>Bronx</h2>
+    <p>More content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner">
+  <img src="/images/i-washington/rock-creek.jpg" alt="">
+</div>
+
+<div class="section">
+  <img src="/images/i-washington/pc-detour.jpg" alt="">
+  <div class="section-text">
+    <h2>Coney Island</h2>
+    <p>Text content here.</p>
+  </div>
+</div>
+  
+<div class="page-banner banner-auto">
+  <img src="/images/i-washington/idaho-state-line.jpg" alt="">
+</div>
+  
+  <script>
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</body>
+</html>
