@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>About Me - Zach Fiske</title>
+  <script>
+    fetch('/favicon.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.error('Error loading favicon:', err));
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+
+<div class="section">
+  <img src="/images/i-ultras/javelina-paid-zoomed.jpg" alt="Zach running in the desert in a Frodo cape at the 2025 Javeline Jundred" title="2025 Javelina Jundred (Photo credit: Howie Stern Photography)">
+  <div class="section-text">
+    <h2>Bio</h2>
+    <p>(Photo credit: Howie Stern Photography).</p>
+  </div>
+</div>
+  
+  <script>
+  fetch('/navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+  </script>
+</body>
+</html>
