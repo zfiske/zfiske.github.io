@@ -223,11 +223,8 @@ a:hover {
 }
 
 .site-footer {
+  background-color: black;
+  color: white;
   text-align: center;
   padding: 20px;
-  background-color: #222;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
