@@ -156,19 +156,18 @@
 <div class="page-banner banner-auto">
   <img src="/images/i-new-york/coney-island.jpg" alt="">
 </div>
+</main>
   
-  <script>
+<div id="footer"></div>
+  
+<script>
   fetch('/navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
     })
     .catch(error => console.error('Error loading navbar:', error));
-  </script>
-  </main>
 
-<div id="footer"></div>
-<script>
   fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
