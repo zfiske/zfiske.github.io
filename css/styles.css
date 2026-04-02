@@ -224,6 +224,19 @@ a:hover {
   border: 0;
 }
 
+.insta-wrapper {
+  flex: 0 0 50%;
+  width: 50%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-wrapper blockquote {
+  width: 100%;
+  max-width: 540px;
+}
+
 .logo img {
   height: 45px;      
   width: auto;        /* keep proportions */
