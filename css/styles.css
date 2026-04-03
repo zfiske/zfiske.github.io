@@ -182,13 +182,13 @@ a:hover {
 .section:hover {
   background-color: #2a2a2a;
 }
-
+/*
 .section a {
   display: block;
   width: 50%;    
   flex: 0 0 50%; 
 }
-
+*/
 .section img {
   flex: 0 0 50%;
   width: 50%;
