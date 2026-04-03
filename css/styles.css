@@ -257,7 +257,7 @@ input, textarea {
 }
 
 button {
-  background: #36e336;
+  background: #f0f0f0;
   color: black;
   border: none;
   padding: 10px;
@@ -266,7 +266,7 @@ button {
 }
 
 button:hover {
-  background: #90ee90;
+  background: #e0e0e0;
 }
 
 #form-status {
