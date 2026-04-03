@@ -224,22 +224,22 @@ a:hover {
   border: 0;
 }
 
-.strava-embed-placeholder {
-  width: 100%;
-  max-width: 540px;
-}
-
-.insta-wrapper {
-  flex: 0 0 50%;
-  width: 50%;
+.insta-wrapper, 
+.strava-wrapper {
+  flex: 0 0 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 405px;     
+  max-width: 540px;  
 }
 
-.insta-wrapper blockquote {
+.insta-wrapper blockquote,
+.strava-wrapper iframe,
+.strava-wrapper .strava-embed-placeholder {
   width: 100%;
-  max-width: 540px;
+  height: 100%;
+  display: block;
 }
 
 form {
