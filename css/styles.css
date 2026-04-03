@@ -337,6 +337,12 @@ button:hover {
     gap: 20px;        
   }
   
+  .section img,
+  .section-text {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
   .section-text {
     padding: 0 10px; 
   }
