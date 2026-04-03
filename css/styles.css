@@ -57,6 +57,13 @@ a:hover {
   padding: 15px 40px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
 .navbar a {
   color: white;
   text-decoration: none;
@@ -349,9 +356,36 @@ button:hover {
     width: 100%;
     height: auto;            /* make responsive */
   }
-  
+
   .navbar {
-      padding: 10px 15px; /* much smaller */
-      flex-wrap: wrap;
-    }
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide menu by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px 0;
+  }
+
+  /* Show when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: left;
+    padding: 10px 20px;
+  }
 }
