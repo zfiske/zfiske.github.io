@@ -47,6 +47,9 @@ a:hover {
 /* NAVBAR */
 
 .navbar {
+  width: 100%;
+  max-width: 100%;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
