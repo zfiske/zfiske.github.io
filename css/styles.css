@@ -300,18 +300,20 @@ button:hover {
 .site-footer {
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 0px;
   text-align: center;
 }
 
 .site-footer a.back-to-top {
-  color: #f0f0f0;
+  color: #c0c0c0;
   text-decoration: none;
-  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .site-footer a.back-to-top:hover {
-  color: #e0e0e0;
+  color: #d0d0d0;
 }
 
 /* Responsive adjustments for mobile */
