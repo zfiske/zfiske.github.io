@@ -264,6 +264,12 @@ button:hover {
   background: #90ee90;
 }
 
+#form-status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #36e336;
+}
+
 .logo img {
   height: 45px;      
   width: auto;        /* keep proportions */
