@@ -115,11 +115,6 @@ a:hover {
   transition-delay: 0s;   /* fade in immediately */
 }
 
-/* Dropdown items */
-.dropdown-menu li {
-/*  padding: 8px 20px; */
-}
-
 /* Full-row clickable links */
 .dropdown-menu li a {
   display: block;
@@ -182,13 +177,13 @@ a:hover {
 .section:hover {
   background-color: #2a2a2a;
 }
-/*
-.section a {
+
+.section a img {
   display: block;
   width: 50%;    
   flex: 0 0 50%; 
 }
-*/
+
 .section img {
   flex: 0 0 50%;
   width: 50%;
