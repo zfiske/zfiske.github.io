@@ -318,11 +318,17 @@ button:hover {
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-  .section {
+  .section,
+  .section.reverse {
     flex-direction: column;  /* stack vertically */
-    padding: 40px 5%;
-    gap: 20px;               /* smaller gap for mobile */
+    padding: 30px 3%;
+    gap: 20px;        
   }
+  
+  .section-text {
+    padding: 0 10px; 
+  }
+}
 
   .insta-wrapper, 
   .strava-wrapper {
