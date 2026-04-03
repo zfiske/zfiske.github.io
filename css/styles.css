@@ -224,6 +224,11 @@ a:hover {
   border: 0;
 }
 
+.strava-embed-placeholder {
+  width: 100%;
+  max-width: 540px;
+}
+
 .insta-wrapper {
   flex: 0 0 50%;
   width: 50%;
