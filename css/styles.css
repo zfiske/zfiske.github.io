@@ -349,4 +349,9 @@ button:hover {
     width: 100%;
     height: auto;            /* make responsive */
   }
+  
+  .navbar {
+      padding: 10px 15px; /* much smaller */
+      flex-wrap: wrap;
+    }
 }
