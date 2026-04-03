@@ -299,3 +299,45 @@ button:hover {
   text-align: center;
   padding: 20px;
 }
+/* Base layout (desktop) */
+.section {
+  display: flex;
+  align-items: center; 
+  padding: 60px 5%;
+  gap: 2rem;
+}
+
+/* Force side-by-side for the wrappers on desktop */
+.insta-wrapper, 
+.strava-wrapper {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 405px;
+  max-width: 540px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;  /* stack vertically */
+    padding: 40px 5%;
+    gap: 20px;               /* smaller gap for mobile */
+  }
+
+  .insta-wrapper, 
+  .strava-wrapper {
+    flex: 0 0 auto;          /* take full width */
+    width: 100%;             /* full width on mobile */
+    height: auto;            /* let height scale with content */
+    max-width: 100%;         /* remove max-width restriction */
+  }
+
+  .insta-wrapper blockquote,
+  .strava-wrapper iframe,
+  .strava-wrapper .strava-embed-placeholder {
+    width: 100%;
+    height: auto;            /* make responsive */
+  }
+}
