@@ -237,6 +237,33 @@ a:hover {
   max-width: 540px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  background: #111;
+  border: 1px solid #444;
+  color: white;
+  font-family: inherit;
+}
+
+button {
+  background: #36e336;
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #90ee90;
+}
+
 .logo img {
   height: 45px;      
   width: auto;        /* keep proportions */
