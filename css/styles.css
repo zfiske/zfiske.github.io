@@ -296,26 +296,20 @@ button:hover {
 .site-footer {
   background-color: black;
   color: white;
-  text-align: center;
   padding: 20px;
-}
-/* Base layout (desktop) */
-.section {
-  display: flex;
-  align-items: center; 
-  padding: 60px 5%;
-  gap: 2rem;
+  color: #888;  
+  align-self: flex-end;
 }
 
-/* Force side-by-side for the wrappers on desktop */
-.insta-wrapper, 
-.strava-wrapper {
-  flex: 0 0 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 405px;
-  max-width: 540px;
+.site-footer a.back-to-top {
+  color: #f0f0f0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.site-footer a.back-to-top:hover {
+  color: #e0e0e0;
 }
 
 /* Responsive adjustments for mobile */
