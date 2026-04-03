@@ -70,7 +70,31 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
-</script>
+  
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop redirect
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "✅ Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Oops! Something went wrong.";
+    }
+  });
+</script>
+  
 </body>
 </html>
