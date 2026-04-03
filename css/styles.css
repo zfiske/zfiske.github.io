@@ -62,12 +62,6 @@ a:hover {
   font-size: 28px;
   cursor: pointer;
   color: white;
-  
-  line-height: 1;      
-  height: 100%;        
-  display: flex;       
-  align-items: center; 
-  justify-content: center;
 }
 
 .navbar a {
@@ -376,6 +370,11 @@ button:hover {
   /* Show hamburger */
   .menu-toggle {
     display: block;
+    line-height: 1;      
+    height: 100%;        
+    display: flex;       
+    align-items: center; 
+    justify-content: center;
   }
 
   /* Hide menu by default */
