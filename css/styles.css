@@ -245,8 +245,6 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 50%;
-  aspect-ratio: 1 / 1;  
-  max-width: 540px;  
 }
 
 .insta-wrapper blockquote,
