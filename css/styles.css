@@ -36,7 +36,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 5%;
+  padding: clamp(30px, 5vw, 70px) 5%;
   background-color: #fff;
   color: black;
 }
