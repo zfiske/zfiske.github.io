@@ -26,6 +26,10 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
+h1{
+  text-align: center;
+}
+
 /* hyperlinks */
 a {
   color: #36e336; /* light green */
