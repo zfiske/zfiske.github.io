@@ -44,7 +44,7 @@ h1{
 
 #announcement-banner .banner-text {
   font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(18px, 2.5vw, 28px);
+  font-size: clamp(24px, 4vw, 48px);
   line-height: 1.4;
   text-align: center;
   color: black;
