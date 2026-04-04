@@ -329,11 +329,11 @@ a:hover {
 }
 
 .section.light a {
-  color: black;
+  color: #4a4a4a;
 }
 
 .section.light a:hover {
-  color: #2a2a2a;
+  color: #6a6a6a;
 }
 
 .section.light .section-text:has(img) a {
