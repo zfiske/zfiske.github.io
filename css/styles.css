@@ -180,7 +180,7 @@ a:hover {
 
 .section a img {
   display: block;
-  width: 50%;    
+  width: 100%;    
   flex: 0 0 50%; 
 }
 
