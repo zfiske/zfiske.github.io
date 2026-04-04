@@ -193,7 +193,11 @@
   const closeBtn = document.getElementById("banner-close");
   
   closeBtn.addEventListener("click", () => {
-    banner.style.display = "none"; // hide the entire section
+    banner.classList.add("fade-out");
+    
+    banner.addEventListener("transitionend", () => {
+      banner.style.display = "none";
+    }, { once: true });
   });
     
     fetch("/footer.html")
