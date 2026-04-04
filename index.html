@@ -172,13 +172,14 @@
   const closeBtn = document.getElementById("banner-close");
 
   if (banner) {
-    document.body.classList.add("has-banner");
+    const height = banner.offsetHeight;
+    document.body.style.paddingTop = height + "px";
   }
 
   if (closeBtn && banner) {
     closeBtn.addEventListener("click", () => {
       banner.style.display = "none";
-      document.body.classList.remove("has-banner");
+      document.body.style.paddingTop = "0px";
     });
   }
   });
