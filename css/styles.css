@@ -326,6 +326,14 @@ a:hover {
   color: #2a2a2a;
 }
 
+.section.light .section-text:has(img) a {
+  color: black;
+}
+
+.section.light .section-text:has(img) a:hover {
+  color: #2a2a2a;
+}
+
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
   flex: 0 0 50%;      /* same as your image width */
