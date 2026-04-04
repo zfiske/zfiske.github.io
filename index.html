@@ -187,23 +187,22 @@
     .catch(error => console.error('Error loading navbar:', error));
 
   // Close button
+  window.addEventListener("load", () => {
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
-  
+
   if (banner) {
-    requestAnimationFrame(() => {
-      banner.style.maxHeight = banner.scrollHeight + "px";
-    });
+    banner.style.maxHeight = banner.scrollHeight + "px";
   }
-  
+
   if (banner && closeBtn) {
     closeBtn.addEventListener("click", () => {
       banner.style.maxHeight = banner.scrollHeight + "px";
-  
+
       requestAnimationFrame(() => {
         banner.classList.add("closed");
       });
-  
+
       banner.addEventListener("transitionend", function handler(e) {
         if (e.propertyName === "max-height") {
           banner.style.display = "none";
@@ -212,6 +211,7 @@
       });
     });
   }
+  });
   
   fetch("/footer.html")
     .then(response => response.text())
