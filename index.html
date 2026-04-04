@@ -187,7 +187,6 @@
     .catch(error => console.error('Error loading navbar:', error));
 
   // Close button
-  document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
 
@@ -212,7 +211,6 @@
         }
       });
     });
-  }
   });
   
   fetch("/footer.html")
