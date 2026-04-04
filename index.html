@@ -168,12 +168,17 @@
 
   // Close button
   document.addEventListener("DOMContentLoaded", () => {
-  const closeBtn = document.getElementById("banner-close");
   const banner = document.getElementById("announcement-banner");
+  const closeBtn = document.getElementById("banner-close");
+
+  if (banner) {
+    document.body.classList.add("has-banner");
+  }
 
   if (closeBtn && banner) {
     closeBtn.addEventListener("click", () => {
       banner.style.display = "none";
+      document.body.classList.remove("has-banner");
     });
   }
   });
