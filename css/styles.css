@@ -60,9 +60,10 @@ h1{
   padding-bottom: 0;
 }
 
-.banner-text {
+#announcement-banner .banner-text {
   text-align: center;
   font-size: 20px;
+  color: black;
 }
 
 #banner-close {
