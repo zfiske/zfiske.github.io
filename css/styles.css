@@ -283,10 +283,10 @@ a:hover {
   padding: 0 20px;   /* small inner padding */
 }
 
-/* Hide image if present */
+/* Hide image if present 
 .section.full-text img {
   display: none;
-}
+}*/
 
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
