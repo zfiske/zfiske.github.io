@@ -264,6 +264,35 @@ a:hover {
   justify-content: center;
 }
 
+/* Only style section-text that contains an image */
+.section .section-text:has(img) {
+  display: flex;
+  flex-direction: column;  /* stack image and text vertically */
+  align-items: center;     /* center horizontally */
+  text-align: center;      /* center text lines */
+  gap: 0.5em;              /* space between image and text */
+}
+
+/* Style the text (links) as headings */
+.section .section-text:has(img) a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.section .section-text:has(img) a:hover {
+  color: #e0e0e0;      
+}
+
+/* Optional: style paragraphs inside section-text with image */
+.section .section-text:has(img) p {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 0;
+}
+
 /* ALTERNATE LAYOUT */
 
 .section.reverse {
