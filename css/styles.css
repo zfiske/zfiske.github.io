@@ -10,10 +10,6 @@ body {
   min-height: 100vh;
 }
 
-body.has-banner {
-  padding-top: 60px; /* match banner height */
-}
-
 html {
   scroll-behavior: smooth;
 }
