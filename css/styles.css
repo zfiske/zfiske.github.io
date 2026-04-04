@@ -35,6 +35,7 @@ h1{
   background: white;
   color: black;
   padding: 10px 50px 10px 20px;
+  z-index: 5; 
 
   display: flex;
   justify-content: center;
@@ -44,7 +45,7 @@ h1{
   position: relative;
 
   overflow: hidden; 
-  height: auto;
+  max-height: auto;
   opacity: 1;
 
   transition: 
@@ -229,77 +230,62 @@ a:hover {
   object-fit: contain;
 }
 
-/* =====================
-   SECTIONS LAYOUT
-   ===================== */
-
-/* Base section layout */
 .section {
   display: flex;
-  gap: 2rem;
+  align-items: center; 
   padding: 60px 5%;
-  flex-wrap: wrap; /* allow stacking on smaller screens */
+  gap: 2rem;
   transition: background-color 0.3s ease;
 }
 
-/* Half sections: images and text stack vertically inside their half */
-.section > .section-text,
-.section > img,
-.section > a img {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column; /* stack children vertically */
-  justify-content: center; /* vertical centering */
-}
-
-/* Half sections: center only if there is a sibling element */
-.section > .section-text + .section-text,
-.section > img + .section-text,
-.section > .section-text + img,
-.section > a img + * {
-  align-items: center;
-  text-align: center;
-}
-
-/* Hover effect */
 .section:hover {
   background-color: #2a2a2a;
 }
 
-/* Alternate layout */
+.section a img {
+  display: block;
+  width: 100%;    
+  flex: 0 0 50%; 
+}
+
+.section img {
+  flex: 0 0 50%;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.section-text {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ALTERNATE LAYOUT */
+
 .section.reverse {
   flex-direction: row-reverse;
 }
 
-/* Full-width sections */
-.section.full-text,
-.section.full-width {
+/* TEXT-ONLY FULL-WIDTH SECTION */
+.section.full-text {
   display: block;        /* remove flex layout */
-  padding: 60px 5%;
+  padding: 60px 5%;     /* slightly wider readable margins */
 }
 
-/* Full-width section text */
-.section.full-text .section-text,
-.section.full-width .section-text {
+.section.full-text .section-text {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* do not vertically center by default */
+  /* max-width: 900px;      /* keeps text readable */
+  margin: 0 auto;        /* center it */
+  padding: 0 20px;   /* small inner padding */
 }
 
-/* Center text under image/link only if an image is present */
-.section.full-width .section-text img,
-.section.full-width .section-text a img {
-  display: block;
-  margin: 0 auto; /* horizontal centering */
-}
-
-.section.full-width .section-text img + *,
-.section.full-width .section-text a img + * {
-  text-align: center;
-  margin-top: 1rem; /* spacing below image */
+/* Hide image if present */
+.section.full-text img {
+  display: none;
 }
 
 /* Make the iframe behave like the image in the flex layout */
