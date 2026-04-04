@@ -39,6 +39,7 @@ h1{
   padding: clamp(20px, 3vw, 40px) 4%;
   background-color: #fff;
   color: black;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #announcement-banner .banner-text {
@@ -57,6 +58,11 @@ h1{
   border: none;
   font-size: 28px;
   cursor: pointer;
+}
+
+#announcement-banner.fade-out {
+  opacity: 0;
+  transform: translateY(-10px); /* slight lift effect (optional, looks nice) */
 }
 
 #countdown {
