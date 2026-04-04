@@ -164,6 +164,11 @@
       }
     })
     .catch(error => console.error('Error loading navbar:', error));
+
+  // Close button
+  document.getElementById("banner-close").addEventListener("click", () => {
+    document.getElementById("announcement-banner").style.display = "none";
+  });
   
   fetch("/footer.html")
     .then(response => response.text())
