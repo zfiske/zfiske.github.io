@@ -171,9 +171,15 @@
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
 
-  if (closeBtn && banner) {
+  if (banner && closeBtn) {
     closeBtn.addEventListener("click", () => {
-      banner.style.display = "none";
+      // Add the closed class to trigger smooth collapse
+      banner.classList.add("closed");
+
+      // After the transition ends, hide completely
+      setTimeout(() => {
+        banner.style.display = "none";
+      }, 400); // match your CSS transition duration
     });
   }
   });
