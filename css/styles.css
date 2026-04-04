@@ -318,6 +318,62 @@ a:hover {
   display: none;
 }*/
 
+/* LIGHT SECTION VARIANT */
+.section.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Hover effect */
+.section.light:hover {
+  background-color: #e0e0e0;
+}
+
+/* Headings */
+.section.light h1,
+.section.light h2,
+.section.light h3 {
+  color: #000;
+}
+
+/* Default links inside light section */
+.section.light a {
+  color: #000;
+}
+
+.section.light a:hover {
+  color: #333;
+}
+
+/* Image + text (stacked) variant */
+.section.light .section-text:has(img) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5em;
+}
+
+/* Heading-style links under images */
+.section.light .section-text:has(img) a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5em;
+  text-decoration: none;
+  color: #000;
+}
+
+.section.light .section-text:has(img) a:hover {
+  color: #333;
+}
+
+/* Optional paragraph styling inside image sections */
+.section.light .section-text:has(img) p {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 0;
+}
+
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
   flex: 0 0 50%;      /* same as your image width */
