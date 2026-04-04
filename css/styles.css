@@ -48,6 +48,8 @@ h1{
   line-height: 1.4;
   text-align: center;
   color: black;
+  width: 100%;
+  padding: 0; 
 }
 
 #banner-close {
@@ -70,7 +72,6 @@ h1{
   font-size: clamp(24px, 4vw, 48px);
   letter-spacing: 3px;
   text-align: center;
-  margin: 20px 0;
   display: block;
 }
 
