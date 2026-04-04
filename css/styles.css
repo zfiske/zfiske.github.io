@@ -345,11 +345,11 @@ a:hover {
 }
 
 .section.light a {
-  color: #000;
+  color: black;
 }
 
 .section.light a:hover {
-  color: #333;
+  color: #2a2a2a;
 }
 
 /* Make the iframe behave like the image in the flex layout */
