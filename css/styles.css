@@ -44,7 +44,7 @@ h1{
   position: relative;
 
   overflow: hidden; 
-  max-height: 200px;
+  height: auto;
   opacity: 1;
 
   transition: 
