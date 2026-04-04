@@ -64,6 +64,8 @@ h1{
   letter-spacing: 3px;
   text-align: center;
   margin: 20px 0;
+  display: block;
+  margin-top: 15px;
 }
 
 /* hyperlinks */
