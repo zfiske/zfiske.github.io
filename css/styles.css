@@ -30,6 +30,14 @@ h1{
   text-align: center;
 }
 
+#countdown {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 20px 0;
+}
+
 /* hyperlinks */
 a {
   color: #36e336; /* light green */
