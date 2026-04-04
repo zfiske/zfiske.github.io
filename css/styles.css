@@ -303,7 +303,17 @@ a:hover {
 /* TEXT-ONLY FULL-WIDTH SECTION */
 .section.full-text {
   display: block;        /* remove flex layout */
-  padding: 60px 5%;     /* slightly wider readable margins */
+  padding: 30px 5%;     /* slightly wider readable margins */
+}
+
+/* Tighter for headings-only sections */
+.section.full-text h1 {
+  margin: 0;
+}
+
+/* Extra tight when it's just a title block */
+.section.full-text:has(h1):not(:has(p)) {
+  padding: 20px 5%;
 }
 
 .section.full-text .section-text {
