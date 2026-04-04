@@ -182,7 +182,7 @@ a:hover {
   display: block;
 }
 
-.banner-text {
+.page-banner .banner-text {
   position: absolute;
   top: 50%;
   left: 50%;
