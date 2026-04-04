@@ -19,6 +19,8 @@
 <body>
 <div id="navbar-placeholder"></div>
 
+<main>
+  
 <div id="announcement-banner">
   <span class="banner-text">  
     Join me on Route 66 for the 100th anniversary of America's Mother Road!
@@ -28,8 +30,6 @@
   </span>
   <button id="banner-close">&times;</button>
 </div>
-
-<main>
 
 <div class="section">
   <img src="/images/i-ultras/javelina-paid-zoomed.jpg" alt="Zach running in the desert in a Frodo cape at the 2025 Javeline Jundred" title="2025 Javelina Jundred (Photo credit: Howie Stern Photography)">
@@ -171,15 +171,9 @@
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
 
-  if (banner) {
-    const height = banner.offsetHeight;
-    document.body.style.paddingTop = height + "px";
-  }
-
   if (closeBtn && banner) {
     closeBtn.addEventListener("click", () => {
       banner.style.display = "none";
-      document.body.style.paddingTop = "0px";
     });
   }
   });
