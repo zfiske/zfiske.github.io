@@ -41,9 +41,9 @@ h1{
   color: black;
   overflow: hidden; /* required for height animation */
   transition: 
-    opacity 0.3s ease,
-    max-height 0.5s ease,
-    padding 0.3s ease;
+    opacity 0.5s ease,
+    max-height 0.4s ease,
+    padding 0.5s ease;
 }
 
 #announcement-banner .banner-text {
@@ -294,6 +294,7 @@ a:hover {
 .section.full-text {
   display: block;        /* remove flex layout */
   padding: 30px 5%;     /* slightly wider readable margins */
+  width: 100%;
 }
 
 /* Tighter for headings-only sections */
