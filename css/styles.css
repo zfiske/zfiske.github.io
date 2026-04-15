@@ -170,6 +170,12 @@ a:hover {
   transition-delay: 0s;   /* fade in immediately */
 }
 
+.dropdown.open .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 /* Full-row clickable links */
 .dropdown-menu li a {
   display: block;
