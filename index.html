@@ -215,7 +215,7 @@
   // Close button
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
-
+/*
   const closedAt = Number(localStorage.getItem("bannerClosedAt"));
   
   if (closedAt) {
@@ -226,15 +226,16 @@
       banner.style.display = "none";
     }
   }
-  
+  */
   closeBtn.addEventListener("click", () => {
     banner.classList.add("fade-out");
-    
+    /*
   localStorage.setItem("bannerClosedAt", Date.now());
 
   setTimeout(() => {
     banner.style.display = "none";
   }, 500)
+  */
   });
   
   fetch("/footer.html")
