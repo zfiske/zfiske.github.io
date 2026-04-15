@@ -177,7 +177,6 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
-    <script>
   
   function sortSections(order) {
     const sections = Array.from(document.querySelectorAll(".section"));
@@ -200,12 +199,6 @@
     localStorage.setItem("sortOrder", order);
   }
   
-    // Re-append in sorted order
-    sections.forEach(section => container.appendChild(section));
-
-    localStorage.setItem("sortOrder", order);
-  }
-
   // Remember order on client side
     window.onload = () => {
     const saved = localStorage.getItem("sortOrder") || "newest";
