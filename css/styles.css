@@ -194,6 +194,15 @@ a:hover {
   padding: 10px 0;
 }
 
+.sort-menu::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+
 .sort-menu #sort-label {
   cursor: pointer;
   color: white;
