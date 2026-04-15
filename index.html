@@ -217,6 +217,12 @@
   
   closeBtn.addEventListener("click", () => {
     banner.classList.add("fade-out");
+    
+  localStorage.setItem("bannerClosed", "true");
+
+  setTimeout(() => {
+    banner.style.display = "none";
+  }, 300)
   });
   
   fetch("/footer.html")
