@@ -177,19 +177,28 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
-    
+    <script>
+  
   function sortSections(order) {
-    const container = document.getElementById("sections");
-    const sections = Array.from(container.getElementsByClassName("section"));
+    const sections = Array.from(document.querySelectorAll(".section"));
+  
+    if (sections.length === 0) return;
+  
+    const parent = sections[0].parentElement;
   
     sections.sort((a, b) => {
       const dateA = new Date(a.dataset.date);
       const dateB = new Date(b.dataset.date);
   
       return order === "newest"
-        ? dateB - dateA   // newest first
-        : dateA - dateB;  // oldest first
+        ? dateB - dateA
+        : dateA - dateB;
     });
+  
+    sections.forEach(section => parent.appendChild(section));
+  
+    localStorage.setItem("sortOrder", order);
+  }
   
     // Re-append in sorted order
     sections.forEach(section => container.appendChild(section));
@@ -201,7 +210,11 @@
     window.onload = () => {
     const saved = localStorage.getItem("sortOrder") || "newest";
     sortSections(saved);
+      
+    const dropdown = document.querySelector("select");
+    if (dropdown) dropdown.value = saved;
   };
+  
 </script>
 
 </body>
