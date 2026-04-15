@@ -225,7 +225,13 @@ window.onload = () => {
 const dropdown = document.getElementById("sort-dropdown");
 const label = document.getElementById("sort-label");
 
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
 label.addEventListener("click", (e) => {
+  if (!isMobile()) return; // ignore desktop
+
   e.preventDefault();
   dropdown.classList.toggle("open");
 });
