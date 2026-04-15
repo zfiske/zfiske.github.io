@@ -27,7 +27,7 @@
 
 <div class="section full-text">
   <div class="section-text">
-    <div class="dropdown sort-menu">
+    <div class="dropdown sort-menu" id="sort-dropdown">
       <div id="sort-label">Sort: Newest</div>
     
       <ul class="dropdown-menu">
@@ -221,6 +221,14 @@ window.onload = () => {
   const saved = localStorage.getItem("sortOrder") || "newest";
   sortSections(saved);
 };
+
+const dropdown = document.getElementById("sort-dropdown");
+const label = document.getElementById("sort-label");
+
+label.addEventListener("click", (e) => {
+  e.preventDefault();
+  dropdown.classList.toggle("open");
+});
   
 </script>
 
