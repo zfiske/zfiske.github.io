@@ -25,10 +25,13 @@
   <div class="banner-text">Ultras</div>
 </div>
 
-<select onchange="sortSections(this.value)">
-  <option value="newest">Newest</option>
-  <option value="oldest">Chronological</option>
-</select>
+<div class="dropdown sort-menu">
+  <a href="#" id="sort-label" onclick="event.preventDefault()">Sort: Newest</a>
+  <ul class="dropdown-menu">
+    <li><a href="#" onclick="event.preventDefault(); sortSections('newest')">Newest</a></li>
+    <li><a href="#" onclick="event.preventDefault(); sortSections('oldest')">Chronological</a></li>
+  </ul>
+</div>
   
 <div class="section" data-date="2025-10-25">
   <img src="/images/i-ultras/javelina-paid.jpg" alt="2025 Javelina Jundred (Photo credit: Howie Stern Photography)" title="2025 Javelina Jundred (Photo credit: Howie Stern Photography)">
@@ -177,7 +180,7 @@
     .then(data => {
       document.getElementById("footer").innerHTML = data;
     });
-  
+   
   function sortSections(order) {
     const sections = Array.from(document.querySelectorAll(".section"));
   
@@ -197,16 +200,22 @@
     sections.forEach(section => parent.appendChild(section));
   
     localStorage.setItem("sortOrder", order);
+  
+    // update dropdown label
+    const label = document.getElementById("sort-label");
+    if (label) {
+      label.textContent =
+        order === "newest"
+          ? "Sort: Newest"
+          : "Sort: Chronological";
+    }
   }
   
   // Remember order on client side
-    window.onload = () => {
-    const saved = localStorage.getItem("sortOrder") || "newest";
-    sortSections(saved);
-      
-    const dropdown = document.querySelector("select");
-    if (dropdown) dropdown.value = saved;
-  };
+window.onload = () => {
+  const saved = localStorage.getItem("sortOrder") || "newest";
+  sortSections(saved);
+};
   
 </script>
 
