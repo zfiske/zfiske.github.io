@@ -214,15 +214,26 @@
   // Close button
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
+
+  const closedAt = Number(localStorage.getItem("bannerClosedAt"));
+  
+  if (closedAt) {
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+  
+    if (now - closedAt < oneDay) {
+      banner.style.display = "none";
+    }
+  }
   
   closeBtn.addEventListener("click", () => {
     banner.classList.add("fade-out");
     
-  localStorage.setItem("bannerClosed", "true");
+  localStorage.setItem("bannerClosedAt", Date.now());
 
   setTimeout(() => {
     banner.style.display = "none";
-  }, 300)
+  }, 500)
   });
   
   fetch("/footer.html")
