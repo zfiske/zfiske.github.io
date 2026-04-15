@@ -144,6 +144,7 @@ a:hover {
   position: absolute;
   top: 100%;
   left: 0;
+  font-family: "Bebas Neue", sans-serif;
 
   opacity: 0;
   pointer-events: none;
