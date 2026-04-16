@@ -468,10 +468,29 @@ button:hover {
 }
 
 .site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   background-color: black;
-  color: white;
-  padding: 0px;
-  text-align: center;
+  color: #c0c0c0;
+  padding: 10px 20px;
+}
+
+/* Left column */
+.site-footer .copyright {
+  justify-self: start;
+  text-align: left; 
+}
+
+/* Center column */
+.site-footer .back-to-top {
+  justify-self: center;
+}
+
+/* Right column */
+.site-footer p {
+  margin: 0;
+  justify-self: end;
 }
 
 .site-footer a.back-to-top {
