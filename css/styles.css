@@ -488,9 +488,27 @@ button:hover {
 }
 
 /* Right column */
-.site-footer p {
-  margin: 0;
+.socials {
+  grid-column: 3;
   justify-self: end;
+
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Icon styling */
+.socials img {
+  height: 24px;
+  width: 24px;
+  display: block;
+  filter: brightness(0.8);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.socials img:hover {
+  filter: brightness(1);
+  transform: scale(1.1);
 }
 
 .site-footer a.back-to-top {
