@@ -256,7 +256,18 @@ a:hover {
   align-items: center; 
   padding: 60px 5%;
   gap: 2rem;
-  transition: background-color 0.3s ease;
+  transition: 
+    background-color 0.3s ease,
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section:hover {
