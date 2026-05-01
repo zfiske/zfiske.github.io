@@ -29,7 +29,7 @@ function loadFooter() {
 
 // SECTION FADE-IN
 function fadeSections() {
-  const sections = document.querySelectorAll('.section');
+  const sections = document.querySelectorAll('.section:not(#announcement-banner)');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
