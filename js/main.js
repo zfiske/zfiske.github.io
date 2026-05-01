@@ -142,3 +142,28 @@ function closeBanner {
 }
   
 // COUNTDOWN
+function doCountdown {
+  
+  const targetDate = new Date("August 4, 2026 07:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "Started!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+      `${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+}
