@@ -51,7 +51,7 @@ function fadeSections() {
 }
 
 // DROPDOWN MENU
-function doDropdown(order) {
+function initDropdown(order) {
   
   const dropdown = document.getElementById("sort-dropdown");
   const label = document.getElementById("sort-label");
@@ -168,12 +168,15 @@ function doCountdown() {
 document.addEventListener("DOMContentLoaded", () => {
   loadNavbar();
   loadFooter();
-  fadeSections();
-  initDropdown();
-  formRedirect();
-  closeBanner();
-  doCountdown();
+
+  if (document.querySelector('.section')) fadeSections();
+  if (document.querySelector('#sort-dropdown')) initDropdown();
+  if (document.querySelector('#contact-form')) formRedirect();
+  if (document.querySelector('#announcement-banner')) closeBanner();
+  if (document.querySelector('#countdown')) doCountdown();
 
   const saved = localStorage.getItem("sortOrder") || "newest";
-  sortSections(saved);
+  if (document.querySelector(".section[data-date]")) {
+    sortSections(saved);
+  }
 });
