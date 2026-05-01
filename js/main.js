@@ -29,7 +29,7 @@ function loadFooter() {
 
 // SECTION FADE-IN
 function fadeSections() {
-  const sections = document.querySelectorAll('.section:not(#announcement-banner)');
+  const sections = document.querySelectorAll('.fade-section');
   if (!sections.length) return;
 
   // Step 1: prepare elements (hide them)
