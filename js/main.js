@@ -43,6 +43,7 @@ function fadeSections() {
 
   sections.forEach(section => {
     observer.observe(section);
+  });
 
   sections.forEach((section, index) => {
     section.style.transitionDelay = `${index * 0.1}s`;
@@ -51,11 +52,6 @@ function fadeSections() {
 
 // DROPDOWN MENU
 function doDropdown(order) {
-  // Remember order on client side
-  window.onload = () => {
-    const saved = localStorage.getItem("sortOrder") || "newest";
-    sortSections(saved);
-  };
   
   const dropdown = document.getElementById("sort-dropdown");
   const label = document.getElementById("sort-label");
@@ -104,7 +100,7 @@ function sortSections(order) {
   }
   
 // CONTACT FORM REDIRECT
-function formRedirect {
+function formRedirect() {
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
@@ -131,7 +127,7 @@ function formRedirect {
 }
 
 // CLOSE BANNER
-function closeBanner {
+function closeBanner() {
   
   const banner = document.getElementById("announcement-banner");
   const closeBtn = document.getElementById("banner-close");
@@ -142,7 +138,7 @@ function closeBanner {
 }
   
 // COUNTDOWN
-function doCountdown {
+function doCountdown() {
   
   const targetDate = new Date("August 4, 2026 07:00:00").getTime();
 
@@ -167,3 +163,17 @@ function doCountdown {
   setInterval(updateCountdown, 1000);
   updateCountdown();
 }
+
+// INITIALIZE EVERYTHING
+document.addEventListener("DOMContentLoaded", () => {
+  loadNavbar();
+  loadFooter();
+  fadeSections();
+  initDropdown();
+  formRedirect();
+  closeBanner();
+  doCountdown();
+
+  const saved = localStorage.getItem("sortOrder") || "newest";
+  sortSections(saved);
+});
