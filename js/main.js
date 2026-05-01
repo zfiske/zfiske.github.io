@@ -50,9 +50,59 @@ function fadeSections() {
 }
 
 // DROPDOWN MENU
-
+function doDropdown(order) {
+  // Remember order on client side
+  window.onload = () => {
+    const saved = localStorage.getItem("sortOrder") || "newest";
+    sortSections(saved);
+  };
+  
+  const dropdown = document.getElementById("sort-dropdown");
+  const label = document.getElementById("sort-label");
+  
+  function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
+  }
+  
+  label.addEventListener("click", (e) => {
+    if (!isMobile()) return; // ignore desktop
+  
+    e.preventDefault();
+    dropdown.classList.toggle("open");
+  });
+}
+                   
 // SECTION SORTING
-
+function sortSections(order) {
+    const sections = Array.from(document.querySelectorAll(".section"));
+  
+    if (sections.length === 0) return;
+  
+    const parent = sections[0].parentElement;
+  
+    sections.sort((a, b) => {
+      const dateA = new Date(a.dataset.date);
+      const dateB = new Date(b.dataset.date);
+  
+      return order === "newest"
+        ? dateB - dateA
+        : dateA - dateB;
+    });
+  
+    sections.forEach(section => parent.appendChild(section));
+  
+    localStorage.setItem("sortOrder", order);
+  
+    // update dropdown label
+    const label = document.getElementById("sort-label");
+    if (label) {
+      label.textContent =
+        order === "newest"
+          ? "Sort: Newest"
+          : "Sort: Chronological";
+    }
+  }
+  
 // CONTACT FORM REDIRECT
 
 // COUNTDOWN
