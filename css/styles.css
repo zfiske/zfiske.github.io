@@ -258,8 +258,8 @@ a:hover {
   gap: 2rem;
   transition: 
     background-color 0.3s ease,
-    opacity 0.8s ease,
-    transform 0.8s ease;
+    opacity 0.3s ease,
+    transform 0.3s ease;
   
   opacity: 0;
   transform: translateY(40px);
