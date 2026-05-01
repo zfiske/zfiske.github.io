@@ -30,24 +30,25 @@ function loadFooter() {
 // SECTION FADE-IN
 function fadeSections() {
   const sections = document.querySelectorAll('.section:not(#announcement-banner)');
+  if (!sections.length) return;
 
+  // Step 1: prepare elements (hide them)
+  sections.forEach((section, index) => {
+    section.classList.add('fade-init');
+    section.style.transitionDelay = `${index * 0.1}s`;
+  });
+
+  // Step 2: observe
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target); // optional: only animate once
       }
     });
-  }, {
-    threshold: 0.2 // trigger when 20% is visible
-  });
+  }, { threshold: 0.2 });
 
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-
-  sections.forEach((section, index) => {
-    section.style.transitionDelay = `${index * 0.1}s`;
-  });
+  sections.forEach(section => observer.observe(section));
 }
 
 // DROPDOWN MENU
