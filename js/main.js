@@ -129,5 +129,16 @@ function formRedirect {
     }
   });
 }
+
+// CLOSE BANNER
+function closeBanner {
+  
+  const banner = document.getElementById("announcement-banner");
+  const closeBtn = document.getElementById("banner-close");
+  
+  closeBtn.addEventListener("click", () => {
+    banner.classList.add("fade-out");
+  });
+}
   
 // COUNTDOWN
