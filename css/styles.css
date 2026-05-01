@@ -257,17 +257,22 @@ a:hover {
   padding: 60px 5%;
   gap: 2rem;
   transition: 
-    background-color 0.3s ease,
-    opacity 0.3s ease,
-    transform 0.3s ease;
-  
+    background-color 0.3s ease;
+}
+
+/* hidden state (only applied via JS) */
+.fade-init {
   opacity: 0;
   transform: translateY(40px);
 }
 
-.section.visible {
+/* visible state */
+.fade-in {
   opacity: 1;
   transform: translateY(0);
+  transition: 
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .section:hover {
