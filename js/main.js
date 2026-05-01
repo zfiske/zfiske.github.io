@@ -104,5 +104,30 @@ function sortSections(order) {
   }
   
 // CONTACT FORM REDIRECT
+function formRedirect {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop redirect
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.innerHTML = "Thanks for your message!";
+      form.reset();
+    } else {
+      status.innerHTML = "Oops! Something went wrong. Please reload the page and try again.";
+    }
+  });
+}
+  
 // COUNTDOWN
