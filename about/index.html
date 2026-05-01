@@ -88,33 +88,9 @@
   
 <div id="footer"></div>
   
+<script src="/js/main.js" defer></script>
 <script async src="https://www.instagram.com/embed.js"></script>
 <script src="https://strava-embeds.com/embed.js"></script>
-  
-<script>
-  fetch('/navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      const placeholder = document.getElementById('navbar-placeholder');
-      placeholder.innerHTML = data;
-  
-      const toggle = document.getElementById("menu-toggle");
-      const nav = document.getElementById("nav-links");
-  
-      if (toggle && nav) {
-        toggle.addEventListener("click", () => {
-          nav.classList.toggle("active");
-        });
-      }
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-
-  fetch("/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-</script>
 
 </body>
 </html>
