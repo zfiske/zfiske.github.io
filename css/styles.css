@@ -75,10 +75,22 @@ h1{
 
 #countdown {
   font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(24px, 4vw, 48px);
+  font-size: clamp(18px, 4vw, 48px);
   letter-spacing: 3px;
   text-align: center;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop-banner {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-banner {
+    display: none;
+  }
 }
 
 /* hyperlinks */
