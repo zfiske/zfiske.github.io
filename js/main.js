@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector('#sort-dropdown')) initDropdown();
   if (document.querySelector('#contact-form')) formRedirect();
   if (document.querySelector('#announcement-banner')) closeBanner();
-  if (document.querySelector('#countdown')) doCountdown();
+  if (document.querySelector('.countdown')) doCountdown();
 
   const saved = localStorage.getItem("sortOrder") || "newest";
   if (document.querySelector(".section[data-date]")) {
