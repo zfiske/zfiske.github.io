@@ -140,25 +140,30 @@ function closeBanner() {
   
 // COUNTDOWN
 function doCountdown() {
-  
+
   const targetDate = new Date("August 4, 2026 07:00:00").getTime();
 
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
+    let countdownText = "";
+
     if (distance <= 0) {
-      document.getElementById("countdown").innerHTML = "Started!";
-      return;
+      countdownText = "Started!";
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      countdownText =
+        `${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    document.getElementById("countdown").innerHTML =
-      `${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`
+    document.querySelectorAll(".countdown").forEach(el => {
+      el.innerHTML = countdownText;
+    });
   }
 
   setInterval(updateCountdown, 1000);
