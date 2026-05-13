@@ -297,8 +297,8 @@ a:hover {
 @media (min-width: 768px) and (max-width: 850px) {
   .spacer {
     height: calc(
-      20px * (1 - (100vw - 768px) / 82)
-    );
+      20px * (1 - (100vw - 768px) / 82))
+    !important;
     background: red;
   }
 }
