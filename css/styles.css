@@ -251,7 +251,29 @@ a:hover {
   justify-content: flex-start;
 }
 
-/* RIGHT-SIDE TEXT PANEL */
+/* DEFAULT RIGHT-SIDE TEXT PANEL */
+.hero-overlay {
+  position: absolute;
+
+  top: var(--overlay-top, 50%);
+  left: var(--overlay-left, auto);
+  right: var(--overlay-right, 5%);
+  bottom: var(--overlay-bottom, auto);
+
+  transform: var(--overlay-transform, translateY(-50%));
+
+  width: var(--overlay-width, 40%);
+  max-width: var(--overlay-max-width, 700px);
+
+  padding: 40px;
+
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+
+  color: white;
+  border-radius: 4px;
+}
+/**
 .hero-overlay {
   width: 40%;
   max-width: 700px;
@@ -264,6 +286,7 @@ a:hover {
 
   color: white;
 }
+**/
 
 .hero-overlay .section-text {
   width: 100%;
