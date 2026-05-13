@@ -247,6 +247,16 @@ a:hover {
   padding: 5%;
 }
 
+.image-section {
+  width: 100%;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* DEFAULT RIGHT-SIDE TEXT PANEL */
 .hero-overlay {
   position: absolute;
@@ -269,20 +279,6 @@ a:hover {
   color: white;
   border-radius: 4px;
 }
-/**
-.hero-overlay {
-  width: 40%;
-  max-width: 700px;
-
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(3px);
-
-  padding: 40px;
-  border-radius: 4px;
-
-  color: white;
-}
-**/
 
 .hero-overlay .section-text {
   width: 100%;
