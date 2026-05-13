@@ -247,10 +247,6 @@ a:hover {
   padding: 5%;
 }
 
-.hero-section.reverse {
-  justify-content: flex-start;
-}
-
 /* DEFAULT RIGHT-SIDE TEXT PANEL */
 .hero-overlay {
   position: absolute;
