@@ -497,6 +497,13 @@ a:hover {
   border: 0;
 }
 
+@media (max-width: 768px) {
+  .travelmap-embed {
+    padding-bottom: 0;
+    height: 90vh;
+  }
+}
+
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
   flex: 0 0 50%;      /* same as your image width */
