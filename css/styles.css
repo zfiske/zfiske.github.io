@@ -229,6 +229,37 @@ a:hover {
   font-size: 20px;
 }
 
+/* FULLSCREEN HERO SECTION */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 5%;
+}
+
+/* RIGHT-SIDE TEXT PANEL */
+.hero-overlay {
+  width: 40%;
+  max-width: 700px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+
+  padding: 40px;
+  border-radius: 4px;
+
+  color: white;
+}
+
 /* FULL-WIDTH PAGE BANNER */
 .page-banner {
   position: relative;
