@@ -275,7 +275,7 @@ a:hover {
   width: var(--overlay-width, 40%);
   max-width: var(--overlay-max-width, 700px);
 
-  padding: clamp(16px, 3vw, 40px);
+  padding: clamp(16px, 2vw, 40px);
 
   background: rgba(0,0,0,0.75);
   backdrop-filter: blur(3px);
@@ -289,10 +289,6 @@ a:hover {
   flex: none;
   font-size: clamp(12px, 1.3vw, 16px);
 }
-/**
-.hero-overlay h2 {
-  font-size: clamp(16px, 1.4vw, 24px);
-}**/
 
 /* FULL-WIDTH PAGE BANNER */
 .page-banner {
