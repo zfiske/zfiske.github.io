@@ -463,15 +463,15 @@ a:hover {
 .section.light h3 {
   color: #000;
 }
-/**
+
 .section.light a {
-  color: #4a4a4a;
+  color: #8a8a8a;
 }
 
 .section.light a:hover {
   color: #6a6a6a;
 }
-**/
+
 .section.light .section-text:has(img) a {
   color: black;
 }
