@@ -705,6 +705,32 @@ button:hover {
     padding: 0 10px; 
   }
 
+  /* WRAP SECTION MOBILE STACK */
+
+  .section.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section.wrap img,
+  .section.wrap.reverse img {
+    float: none;
+  
+    width: 100%;
+    max-width: 100%;
+  
+    margin: 0;
+  
+    display: block;
+  }
+  
+  .section.wrap .section-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
   .insta-wrapper, 
   .strava-wrapper {
     flex: 0 0 auto;          /* take full width */
