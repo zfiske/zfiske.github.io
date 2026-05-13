@@ -249,6 +249,7 @@ a:hover {
 
 .image-section {
   position: relative;
+  overflow: hidden;
   width: 100%;
   background: white;
   min-height: 400px;
