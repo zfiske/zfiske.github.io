@@ -250,6 +250,8 @@ a:hover {
 .image-section {
   position: relative;
   width: 100%;
+  background: white;
+  min-height: 400px;
 }
 
 .image-section img {
