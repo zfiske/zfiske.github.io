@@ -479,6 +479,28 @@ a:hover {
   color: #2a2a2a;
 }
 
+/* TRAVELMAP EMBED */
+.travelmap-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  aspect-ratio: 4 / 3;
+}
+
+.travelmap-wrapper iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
 /* Make the iframe behave like the image in the flex layout */
 .map-wrapper {
   flex: 0 0 50%;      /* same as your image width */
