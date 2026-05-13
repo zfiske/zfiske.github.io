@@ -439,17 +439,23 @@ a:hover {
   flex: 0 0 auto;
 }
 
-/* WRAP SECTION VARIANT */
+/* WRAP SECTION */
 
+/* default: normal section behavior */
 .section.wrap {
-  display: block;
-  overflow: hidden; /* clears float */
+  /* inherits standard .section flex layout */
 }
 
-.section.wrap img {
+/* activated only when text is much taller */
+.section.wrap.needs-wrap {
+  display: block;
+  overflow: hidden; /* clear floats */
+}
+
+.section.wrap.needs-wrap img {
   float: left;
 
-  width: min(50%, 700px);
+  width: clamp(280px, 45%, 700px);
   height: auto;
 
   margin:
@@ -458,10 +464,12 @@ a:hover {
     1rem
     0;
 
+  flex: none;
+
   display: block;
 }
 
-.section.wrap.reverse img {
+.section.wrap.reverse.needs-wrap img {
   float: right;
 
   margin:
@@ -471,14 +479,11 @@ a:hover {
     2rem;
 }
 
-.section.wrap .section-text {
+.section.wrap.needs-wrap .section-text {
   display: block;
   width: auto;
   flex: none;
-}
-
-.section.wrap .section-text > *:first-child {
-  margin-top: 0;
+  padding: 0;
 }
 
 /* LIGHT SECTION VARIANT */
