@@ -706,7 +706,7 @@ button:hover {
   }
 
   /* WRAP SECTION MOBILE STACK */
-
+  
   .section.wrap {
     display: flex;
     flex-direction: column;
@@ -716,13 +716,7 @@ button:hover {
   .section.wrap img,
   .section.wrap.reverse img {
     float: none;
-  
-    width: 100%;
-    max-width: 100%;
-  
     margin: 0;
-  
-    display: block;
   }
   
   .section.wrap .section-text {
