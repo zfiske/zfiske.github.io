@@ -290,22 +290,6 @@ a:hover {
   font-size: clamp(12px, 1.3vw, 16px);
 }
 
-/* SCROLLING */
-.hero-overlay {
-  max-height: 80vh;
-  overflow-y: auto;
-  scrollbar-width: thin; /* Firefox */
-}
-
-.hero-overlay::-webkit-scrollbar {
-  width: 6px;
-}
-
-.hero-overlay::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.3);
-  border-radius: 3px;
-}
-
 /* FULL-WIDTH PAGE BANNER */
 .page-banner {
   position: relative;
