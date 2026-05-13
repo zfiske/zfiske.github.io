@@ -289,13 +289,13 @@ a:hover {
   font-size: clamp(12px, 1.3vw, 16px);
 }
 
-/* SECTION SPACER FOR HERO FIX ON SMALL SCREENS */
-.section-spacer {
+/* SPACER FOR HERO FIX ON SMALL SCREENS */
+.spacer {
   height: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
-  .section-spacer {
+  .spacer {
     height: calc(
       80px - ( (100vw - 768px) / 232 ) * 60px
     );
