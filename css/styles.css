@@ -463,7 +463,7 @@ a:hover {
 .section.light h3 {
   color: #000;
 }
-
+/**
 .section.light a {
   color: #4a4a4a;
 }
@@ -471,7 +471,7 @@ a:hover {
 .section.light a:hover {
   color: #6a6a6a;
 }
-
+**/
 .section.light .section-text:has(img) a {
   color: black;
 }
