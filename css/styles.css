@@ -297,7 +297,7 @@ a:hover {
 /* only active in your range */
 @media (min-width: 768px) and (max-width: 1000px) {
   .section-spacer {
-    height: clamp(0px, 5vw, 80px);
+    height: clamp(20px, calc(80px - 8vw), 80px);
   }
 }
 
