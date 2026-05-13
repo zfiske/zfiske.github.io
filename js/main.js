@@ -133,9 +133,10 @@ function wrapSections() {
       const textHeight = text.offsetHeight;
 
       // amount text must exceed image by
-      const EXTRA_TEXT_THRESHOLD = 200;
-
-      if (textHeight > imageHeight + EXTRA_TEXT_THRESHOLD) {
+      const lineHeight = parseFloat(getComputedStyle(text).lineHeight);
+      const maxAllowedOverflow = lineHeight * 3; // allow ~3 extra lines
+      
+      if (textHeight - imageHeight > maxAllowedOverflow) {
         section.classList.add('needs-wrap');
       }
     });
