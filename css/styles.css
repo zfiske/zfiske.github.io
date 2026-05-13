@@ -503,7 +503,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .travelmap-embed {
+  .travelmap-wrapper {
     padding-bottom: 0;
     height: 90vh;
   }
