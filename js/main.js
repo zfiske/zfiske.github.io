@@ -101,51 +101,62 @@ function sortSections(order) {
   }
 
 // WRAP SECTIONS IF TEXT IS MUCH TALLER THAN IMAGE
-function updateWrapSections() {
-
-  // disable wrapped mode on mobile
-  if (window.innerWidth <= 768) {
-    document.querySelectorAll('.section.wrap')
-      .forEach(section => {
-        section.classList.remove('needs-wrap');
-      });
-
-    return;
-  }
+function wrapSections() {
 
   const sections = document.querySelectorAll('.section.wrap');
 
-  sections.forEach(section => {
-    const img = section.querySelector('img');
-    const text = section.querySelector('.section-text');
+  if (!sections.length) return;
 
-    if (!img || !text) return;
+  function updateWrapSections() {
 
-    // reset first
-    section.classList.remove('needs-wrap');
+    // disable wrapped mode on mobile
+    if (window.innerWidth <= 768) {
 
-    // measure heights
-    const imageHeight = img.offsetHeight;
-    const textHeight = text.offsetHeight;
+      sections.forEach(section => {
+        section.classList.remove('needs-wrap');
+      });
 
-    // amount text must exceed image by
-    const EXTRA_TEXT_THRESHOLD = 200;
-
-    if (textHeight > imageHeight + EXTRA_TEXT_THRESHOLD) {
-      section.classList.add('needs-wrap');
+      return;
     }
-  });
-}
 
-window.addEventListener('load', updateWrapSections);
-window.addEventListener('resize', updateWrapSections);
+    sections.forEach(section => {
 
-// re-check after images load
-document.querySelectorAll('.section.wrap img')
-  .forEach(img => {
+      const img = section.querySelector('img');
+      const text = section.querySelector('.section-text');
+
+      if (!img || !text) return;
+
+      // reset before measuring
+      section.classList.remove('needs-wrap');
+
+      const imageHeight = img.offsetHeight;
+      const textHeight = text.offsetHeight;
+
+      // amount text must exceed image by
+      const EXTRA_TEXT_THRESHOLD = 200;
+
+      if (textHeight > imageHeight + EXTRA_TEXT_THRESHOLD) {
+        section.classList.add('needs-wrap');
+      }
+    });
+  }
+
+  // initial run
+  updateWrapSections();
+
+  // resize updates
+  window.addEventListener('resize', updateWrapSections);
+
+  // image load updates
+  sections.forEach(section => {
+
+    const img = section.querySelector('img');
+
+    if (!img || img.complete) return;
+
     img.addEventListener('load', updateWrapSections);
   });
-
+}
 // CONTACT FORM REDIRECT
 function formRedirect() {
   const form = document.getElementById("contact-form");
@@ -222,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadFooter();
 
   if (document.querySelector('.section')) fadeSections();
-  if (document.querySelector('.section.wrap')) updateWrapSections();
+  if (document.querySelector('.section.wrap')) wrapSections();
   if (document.querySelector('#sort-dropdown')) initDropdown();
   if (document.querySelector('#contact-form')) formRedirect();
   if (document.querySelector('#announcement-banner')) closeBanner();
