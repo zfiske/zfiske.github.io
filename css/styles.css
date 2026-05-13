@@ -248,6 +248,7 @@ a:hover {
 }
 
 .image-section {
+  position: relative;
   width: 100%;
 }
 
