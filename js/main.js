@@ -71,34 +71,33 @@ function initDropdown(order) {
                    
 // SECTION SORTING
 function sortSections(order) {
-    const sections = Array.from(document.querySelectorAll(".section"));
-  
-    if (sections.length === 0) return;
-  
-    const parent = sections[0].parentElement;
-  
-    sections.sort((a, b) => {
-      const dateA = new Date(a.dataset.date);
-      const dateB = new Date(b.dataset.date);
-  
-      return order === "newest"
-        ? dateB - dateA
-        : dateA - dateB;
-    });
-  
-    sections.forEach(section => parent.appendChild(section));
-  
-    localStorage.setItem("sortOrder", order);
-  
-    // update dropdown label
-    const label = document.getElementById("sort-label");
-    if (label) {
-      label.textContent =
-        order === "newest"
-          ? "Sort: Newest"
-          : "Sort: Chronological";
-    }
+  const container = document.getElementById("sections-container");
+  if (!container) return;
+
+  const sections = Array.from(container.querySelectorAll(".section[data-date]"));
+  if (sections.length === 0) return;
+
+  sections.sort((a, b) => {
+    const dateA = new Date(a.dataset.date);
+    const dateB = new Date(b.dataset.date);
+
+    return order === "newest"
+      ? dateB - dateA
+      : dateA - dateB;
+  });
+
+  sections.forEach(section => container.appendChild(section));
+
+  localStorage.setItem("sortOrder", order);
+
+  const label = document.getElementById("sort-label");
+  if (label) {
+    label.textContent =
+      order === "newest"
+        ? "Sort: Newest"
+        : "Sort: Chronological";
   }
+}
 
 // WRAP SECTIONS IF TEXT IS MUCH TALLER THAN IMAGE
 function wrapSections() {
