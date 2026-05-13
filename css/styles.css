@@ -264,6 +264,11 @@ a:hover {
   color: white;
 }
 
+.hero-overlay .section-text {
+  width: 100%;
+  flex: none;
+}
+
 /* FULL-WIDTH PAGE BANNER */
 .page-banner {
   position: relative;
