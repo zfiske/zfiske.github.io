@@ -157,6 +157,7 @@ function wrapSections() {
     img.addEventListener('load', updateWrapSections);
   });
 }
+
 // CONTACT FORM REDIRECT
 function formRedirect() {
   const form = document.getElementById("contact-form");
