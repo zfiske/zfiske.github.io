@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadFooter();
 
   if (document.querySelector('.section')) fadeSections();
-  if (document.querySelector('.section wrap')) updateWrapSections();
+  if (document.querySelector('.section.wrap')) updateWrapSections();
   if (document.querySelector('#sort-dropdown')) initDropdown();
   if (document.querySelector('#contact-form')) formRedirect();
   if (document.querySelector('#announcement-banner')) closeBanner();
