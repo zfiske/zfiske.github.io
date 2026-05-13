@@ -287,11 +287,11 @@ a:hover {
 .hero-overlay .section-text {
   width: 100%;
   flex: none;
-  font-size: clamp(14px, 2vw, 18px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .hero-overlay h2 {
-  font-size: clamp(18px, 2.5vw, 32px);
+  font-size: clamp(16px, 2.5vw, 24px);
 }
 
 /* FULL-WIDTH PAGE BANNER */
