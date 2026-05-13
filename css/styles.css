@@ -439,10 +439,47 @@ a:hover {
   flex: 0 0 auto;
 }
 
-/* Hide image if present 
-.section.full-text img {
-  display: none;
-}*/
+/* WRAP SECTION VARIANT */
+
+.section.wrap {
+  display: block;
+  overflow: hidden; /* clears float */
+}
+
+.section.wrap img {
+  float: left;
+
+  width: min(50%, 700px);
+  height: auto;
+
+  margin:
+    0
+    2rem
+    1rem
+    0;
+
+  display: block;
+}
+
+.section.wrap.reverse img {
+  float: right;
+
+  margin:
+    0
+    0
+    1rem
+    2rem;
+}
+
+.section.wrap .section-text {
+  display: block;
+  width: auto;
+  flex: none;
+}
+
+.section.wrap .section-text > *:first-child {
+  margin-top: 0;
+}
 
 /* LIGHT SECTION VARIANT */
 .section.light {
