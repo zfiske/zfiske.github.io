@@ -289,6 +289,18 @@ a:hover {
   font-size: clamp(12px, 1.3vw, 16px);
 }
 
+/* SECTION SPACER FOR HERO FIX ON SMALL SCREENS */
+.section-spacer {
+  height: 0;
+}
+
+/* only active in your range */
+@media (min-width: 768px) and (max-width: 1000px) {
+  .section-spacer {
+    height: clamp(0px, 5vw, 80px);
+  }
+}
+
 /* FULL-WIDTH PAGE BANNER */
 .page-banner {
   position: relative;
