@@ -538,6 +538,9 @@ a:hover {
   margin: 0 auto;
 
   aspect-ratio: 8 / 3;
+
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .travelmap-wrapper iframe {
