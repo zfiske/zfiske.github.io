@@ -570,6 +570,33 @@ a:hover {
   max-height: 90px;
 }
 
+@media (max-width: 768px) {
+
+  /* Main partner tier: 2 across */
+  .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Smaller partner tier: 3 across */
+  .partner-grid.smaller {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .partner-logo {
+    min-height: 90px;
+  }
+
+  .partner-logo img {
+    max-width: 90%;
+    max-height: 70px;
+  }
+
+  .partner-grid.smaller img {
+    max-height: 50px;
+  }
+}
+
 /* TRAVELMAP EMBED */
 .travelmap-wrapper {
   position: relative;
