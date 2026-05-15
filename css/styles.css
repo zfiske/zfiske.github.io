@@ -554,9 +554,6 @@ a:hover {
 }
 
 .partner-logo img {
-  max-width: 80%;
-  max-height: 75%;
-
   width: auto;
   height: auto;
 
@@ -564,6 +561,8 @@ a:hover {
 }
 
 .partner-grid.smaller .partner-logo {
+  max-width: 80%;
+  max-height: 75%;
   flex: 0 1 calc(20% - 20px); /* 5 across */
 }
 
