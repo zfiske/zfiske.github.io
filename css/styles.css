@@ -529,26 +529,9 @@ a:hover {
 }
 
 /* PARTNER SECTION */
-.partner-section {
-  padding: 60px 5%;
-  background: black;
-  color: white;
-}
-
-.partner-tier {
-  margin-bottom: 50px;
-}
-
-.partner-tier-title {
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 4px;
-  font-size: clamp(24px, 3vw, 40px);
-}
-
 .partner-divider {
   border: none;
-  border-top: 1px solid #444;
+  border-top: 1px solid #bbb;
   margin: 60px auto;
   width: 85%;
 }
@@ -557,11 +540,12 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 40px;
+
   align-items: center;
   justify-items: center;
 }
 
-.partner-grid a {
+.partner-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -571,46 +555,19 @@ a:hover {
 
   padding: 20px;
 
-  background: #111;
-  border: 1px solid #222;
-
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease;
+  background: white;
+  border: 1px solid #d0d0d0;
 }
 
-.partner-grid a:hover {
-  transform: translateY(-4px);
-  border-color: #666;
-  background: #1a1a1a;
-}
-
-.partner-grid img {
+.partner-logo img {
   max-width: 100%;
   max-height: 90px;
-  width: auto;
-  height: auto;
 
   object-fit: contain;
-
-  filter: brightness(0.95);
 }
 
 .partner-grid.smaller img {
   max-height: 65px;
-}
-
-@media (max-width: 768px) {
-  .partner-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .partner-grid a {
-    min-height: 110px;
-    padding: 15px;
-  }
 }
 
 /* TRAVELMAP EMBED */
