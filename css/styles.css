@@ -540,7 +540,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .partner-logo {
@@ -561,8 +561,6 @@ a:hover {
 }
 
 .partner-grid.smaller .partner-logo {
-  max-width: 80%;
-  max-height: 75%;
   flex: 0 1 calc(20% - 20px); /* 5 across */
 }
 
