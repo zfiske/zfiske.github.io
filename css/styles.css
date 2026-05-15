@@ -539,7 +539,7 @@ a:hover {
 .partner-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 40px;
+  gap: 20px;
 
   align-items: center;
   justify-items: center;
@@ -557,8 +557,8 @@ a:hover {
 }
 
 .partner-logo img {
-  max-width: 100%;
-  max-height: 120px;
+  max-width: 80%;
+  max-height: 100%;
 
   width: auto;
   height: auto;
