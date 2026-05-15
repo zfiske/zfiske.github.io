@@ -553,21 +553,21 @@ a:hover {
   width: 100%;
   min-height: 140px;
 
-  padding: 20px;
-
   background: white;
-  border: 1px solid #d0d0d0;
 }
 
 .partner-logo img {
   max-width: 100%;
-  max-height: 90px;
+  max-height: 120px;
+
+  width: auto;
+  height: auto;
 
   object-fit: contain;
 }
 
 .partner-grid.smaller img {
-  max-height: 65px;
+  max-height: 90px;
 }
 
 /* TRAVELMAP EMBED */
