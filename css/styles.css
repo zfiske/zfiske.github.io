@@ -550,7 +550,7 @@ a:hover {
 
   min-height: 140px;
   background: white;
-  flex: 0 1 220px;
+  flex: 0 1 calc(33.333% - 20px); /* default: 3 across */
 }
 
 .partner-logo img {
@@ -563,8 +563,8 @@ a:hover {
   object-fit: contain;
 }
 
-.partner-grid.smaller img {
-  max-height: 110px;
+.partner-grid.smaller .partner-logo {
+  flex: 0 1 calc(20% - 20px); /* 5 across */
 }
 
 @media (max-width: 768px) {
