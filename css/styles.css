@@ -531,7 +531,7 @@ a:hover {
 /* PARTNER SECTION */
 .partner-divider {
   border: none;
-  border-top: 1px solid #bbb;
+  border-top: 2px solid #bbb;
   margin: 60px auto;
   width: 85%;
 }
