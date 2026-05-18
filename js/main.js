@@ -133,15 +133,7 @@ function wrapSections() {
       const imageHeight = img.getBoundingClientRect().height;
       
       const rect = text.getBoundingClientRect();
-      const style = getComputedStyle(text);
-      
-      const marginTop = parseFloat(style.marginTop);
-      const marginBottom = parseFloat(style.marginBottom);
-      
-      // margin collapse: only the larger margin contributes to layout height
-      const collapsedMargin = Math.max(marginTop, marginBottom);
-      
-      const textHeight = rect.height - collapsedMargin;
+      const textHeight = rect.height - 40;
 
       console.log("img:", imageHeight, "text:", textHeight);
 
