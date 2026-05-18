@@ -129,7 +129,6 @@ function wrapSections() {
       section.classList.remove('needs-wrap');
       
       const imageHeight = img.getBoundingClientRect().height;
-      const paragraph = text.querySelector('p');
       const textHeight = text.scrollHeight;
 
       // amount text must exceed image by
