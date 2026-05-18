@@ -108,7 +108,7 @@ function wrapSections() {
   if (!sections.length) return;
 
   function updateWrapSections() {
-    console.log("updateWrapSections");
+    console.log("updateWrapSections new");
 
     // disable wrapped mode on mobile
     if (window.innerWidth <= 768) {
