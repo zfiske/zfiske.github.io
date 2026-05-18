@@ -127,16 +127,12 @@ function wrapSections() {
 
       // reset before measuring
       section.classList.remove('needs-wrap');
-      
-      const imageHeight = img.getBoundingClientRect().height;
-      const textHeight = text.scrollHeight;
+
+      const imageHeight = img.offsetHeight;
+      const textHeight = text.offsetHeight;
 
       // amount text must exceed image by
-      let lineHeight = parseFloat(getComputedStyle(text).lineHeight);
-      if (isNaN(lineHeight)) {
-        lineHeight =
-          parseFloat(getComputedStyle(text).fontSize) * 1.6;
-      }
+      const lineHeight = parseFloat(getComputedStyle(text).lineHeight);
       const maxAllowedOverflow = lineHeight * 3; // allow ~3 extra lines
       
       if (textHeight - imageHeight > maxAllowedOverflow) {
@@ -155,14 +151,11 @@ function wrapSections() {
   sections.forEach(section => {
 
     const img = section.querySelector('img');
-    
-    if (img) {
-      img.addEventListener('load', updateWrapSections);
-    }
-  
+
+    if (!img || img.complete) return;
+
+    img.addEventListener('load', updateWrapSections);
   });
-  
-  window.addEventListener('load', updateWrapSections);
 }
 
 // CONTACT FORM REDIRECT
