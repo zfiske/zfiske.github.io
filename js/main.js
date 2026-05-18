@@ -131,6 +131,8 @@ function wrapSections() {
       const imageHeight = img.getBoundingClientRect().height;
       const textHeight = text.scrollHeight;
 
+      console.log("img:", imageHeight, "text:", textHeight);
+
       // amount text must exceed image by
       let lineHeight = parseFloat(getComputedStyle(text).lineHeight);
       if (isNaN(lineHeight)) {
