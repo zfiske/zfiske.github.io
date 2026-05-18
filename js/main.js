@@ -131,13 +131,17 @@ function wrapSections() {
       section.classList.remove('needs-wrap');
       
       const imageHeight = img.getBoundingClientRect().height;
+      
       const rect = text.getBoundingClientRect();
       const style = getComputedStyle(text);
       
       const marginTop = parseFloat(style.marginTop);
       const marginBottom = parseFloat(style.marginBottom);
       
-      const textHeight = rect.height + marginTop + marginBottom;
+      // margin collapse: only the larger margin contributes to layout height
+      const collapsedMargin = Math.max(marginTop, marginBottom);
+      
+      const textHeight = rect.height + collapsedMargin;
 
       console.log("img:", imageHeight, "text:", textHeight);
 
