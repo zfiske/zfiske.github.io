@@ -133,7 +133,7 @@ function wrapSections() {
       const imageHeight = img.getBoundingClientRect().height;
       
       const rect = text.getBoundingClientRect();
-      const textHeight = rect.height - 40;
+      const textHeight = rect.height;
 
       console.log("img:", imageHeight, "text:", textHeight);
 
@@ -143,7 +143,7 @@ function wrapSections() {
         lineHeight =
           parseFloat(getComputedStyle(text).fontSize) * 1.6;
       }
-      const maxAllowedOverflow = lineHeight * 3; // allow ~3 extra lines
+      const maxAllowedOverflow = lineHeight * 3.5 + 40; // allow ~3 extra lines, and account for margins
       
       if (textHeight - imageHeight > maxAllowedOverflow) {
         section.classList.add('needs-wrap');
