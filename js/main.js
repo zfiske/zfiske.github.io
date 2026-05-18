@@ -101,12 +101,14 @@ function sortSections(order) {
 
 // WRAP SECTIONS IF TEXT IS MUCH TALLER THAN IMAGE
 function wrapSections() {
+  console.log("wrapSections");
 
   const sections = document.querySelectorAll('.section.wrap');
 
   if (!sections.length) return;
 
   function updateWrapSections() {
+    console.log("updateWrapSections");
 
     // disable wrapped mode on mobile
     if (window.innerWidth <= 768) {
@@ -254,4 +256,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   
   wrapSections();
+  console.log("wrapSections init");
 });
