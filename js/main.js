@@ -131,7 +131,13 @@ function wrapSections() {
       section.classList.remove('needs-wrap');
       
       const imageHeight = img.getBoundingClientRect().height;
-      const textHeight = text.scrollHeight;
+      const rect = text.getBoundingClientRect();
+      const style = getComputedStyle(text);
+      
+      const marginTop = parseFloat(style.marginTop);
+      const marginBottom = parseFloat(style.marginBottom);
+      
+      const textHeight = rect.height + marginTop + marginBottom;
 
       console.log("img:", imageHeight, "text:", textHeight);
 
