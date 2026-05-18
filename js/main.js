@@ -131,7 +131,7 @@ function wrapSections() {
       section.classList.remove('needs-wrap');
       
       const imageHeight = img.getBoundingClientRect().height;
-      const textHeight = text.getBoundingClientRect();
+      const textHeight = text.getBoundingClientRect().height;
 
       console.log("img:", imageHeight, "text:", textHeight);
 
