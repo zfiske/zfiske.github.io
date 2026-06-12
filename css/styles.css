@@ -294,21 +294,15 @@ a:hover {
   height: 0;
 }
 
-@media (min-width: 900px) and (max-width: 1600px) {
+@media (min-width: 850px) and (max-width: 1400px) {
   .spacer {
     height: 20px !important;
   }
 }
 
-@media (min-width: 825px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 850px) {
   .spacer {
     height: 40px !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 825px) {
-  .spacer {
-    height: 60px !important;
   }
 }
 
