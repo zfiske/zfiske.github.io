@@ -211,25 +211,49 @@ function closeBanner() {
   
 // COUNTDOWN
 function doCountdown() {
+  const targetDate = new Date("2026-08-04T06:00:00-05:00"); // 6am CDT, Aug 4 2026
+  const endDateKey = "2026-11-12"; // Run complete! starting this Central calendar date
 
-  const targetDate = new Date("August 4, 2026 07:00:00").getTime();
+  function getCentralDateKey(date) {
+    const fmt = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Chicago",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    });
+    return fmt.format(date);
+  }
+
+  function pad(num, length = 2) {
+    return String(num).padStart(length, "0");
+  }
 
   function updateCountdown() {
-    const now = new Date().getTime();
+    const now = new Date();
     const distance = targetDate - now;
-
     let countdownText = "";
 
     if (distance <= 0) {
-      countdownText = "Started!";
+      const todayKey = getCentralDateKey(now);
+
+      if (todayKey >= endDateKey) {
+        countdownText = "Run complete!";
+      } else {
+        const elapsed = -distance; // ms since start
+        const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
+        const seconds = Math.floor((elapsed / 1000) % 60);
+        countdownText =
+          `Time since start: ${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`;
+      }
     } else {
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
       const minutes = Math.floor((distance / (1000 * 60)) % 60);
       const seconds = Math.floor((distance / 1000) % 60);
-
       countdownText =
-        `${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`;
+        `Run starts: ${days} DAYS • ${hours} HOURS • ${minutes} MIN • ${seconds} SEC`;
     }
 
     document.querySelectorAll(".countdown").forEach(el => {
