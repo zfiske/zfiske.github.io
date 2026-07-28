@@ -81,6 +81,10 @@ h1{
   display: block;
 }
 
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
 @media (max-width: 768px) {
   .desktop {
     display: none;
