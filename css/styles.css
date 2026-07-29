@@ -34,8 +34,8 @@ h1{
 /* shrink h1 margins to fit on small screens */
 @media (max-width: 900px) {
   h1 {
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
   }
 }
 
