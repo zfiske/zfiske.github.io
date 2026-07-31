@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Route 66 Centennial - Zach Fiske</title>
+  <script>
+    fetch('/favicon.html')
+      .then(response => response.text())
+      .then(data => {
+        document.head.insertAdjacentHTML('beforeend', data);
+      })
+      .catch(err => console.error('Error loading favicon:', err));
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<main>
+
+<div class="desktop">
+  <div class="page-banner banner-auto">
+    <img src="/images/i-route-66/route-66-run-banner-rwb.jpg" alt="">
+  </div>
+</div>
+<div class="mobile">
+  <div class="page-banner banner-auto">
+    <img src="/images/i-route-66/route-66-run-banner-rwb-mobile.jpg" alt="">
+  </div>
+</div>
+
+<div class="desktop">
+  <div class="section full-text light" id="tracking">
+    <h2>
+      Live tracking: <span class="countdown"></span>
+    </h2>
+    <div class="travelmap-wrapper">
+      <iframe 
+        src="https://zachfiske.travelmap.net"
+        allow="fullscreen"
+        title="TravelMap embed">
+      </iframe>
+    </div> 
+  </div>
+  <section class="image-section"
+  style="
+    --overlay-left: 50%;
+    --overlay-right: 5%;
+
+    --overlay-width: auto;
+    --overlay-max-width: none;
+
+    --overlay-top: 5%;
+    --overlay-bottom: auto;
+
+    --overlay-transform: none;
+  "> 
+  <img src="/images/i-route-66/zach-tetons.jpg" alt="" class="flip-horizontal">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <h1>Join me on Route 66!</h1>
+        <p>
+          <strong>
+            Join me in celebrating a special moment in history along the fabled roads of Route 66!
+          </strong> 
+          This fall I will run over 2400 miles from Navy Pier in Chicago to Santa Monica Pier in L.A. to commemorate the 1928 Bunion Derby - 
+          a grueling race across America that took place on the original dirt roads of Route 66.
+          The story of the Bunion Derby teaches us that the roots of ultramarathon running are older and more diverse than most of us realize.
+          This snapshot in time, on the 100th anniversary of Route 66, is a unique opportunity to be a part of history and look back on the 
+          century of change that has shaped our nation and our sport.
+          <br><br>
+          I'd love it if you would run, bike, or walk with me, for one mile or many, to commemorate this once-in-a-century moment -
+          feel free to <a href="#timeline">join a group run</a> or <a href="#tracking">track me down</a> at any point between August and November.
+          I hope to see you on the Mother Road!
+        </p>
+        <h1>
+          <a href="https://docs.google.com/document/d/1Wjm-oA5h4PreNbG785iNnUZ4PO-Y-J9WW9hjGexW0NY/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span style="color: blue;">JOIN</span></a> • 
+          <a href="https://gofund.me/2bcaaac81" target="_blank" rel="noopener noreferrer"><span style="color: white;">SUPPORT</span></a> • 
+          <a href="https://www.instagram.com/zachcfiske/?hl=en" target="_blank" rel="noopener noreferrer"><span style="color: red;">FOLLOW</span></a>
+        </h1>
+      </div>
+    </div>
+  </section>
+</div>  
+<div class="mobile">
+  <div class="section light" id="tracking-mobile">
+    <div class="section-text">
+      <h2>
+        Live tracking: <span class="countdown"></span>
+      </h2>
+      <div class="travelmap-wrapper">
+        <iframe
+          src="https://zachfiske.travelmap.net"
+          allow="fullscreen"
+          title="TravelMap embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <div class="section light reverse">
+    <img src="/images/i-route-66/zach-tetons.jpg" alt="" class="flip-horizontal">
+    <div class="section-text">
+      <h1>Join me on Route 66!</h1>
+      <p>
+        <strong>
+          Join me in celebrating a special moment in history along the fabled roads of Route 66!
+        </strong> 
+        This fall I will run over 2400 miles from Navy Pier in Chicago to Santa Monica Pier in L.A. to commemorate the 1928 Bunion Derby - 
+        a grueling race across America that took place on the original dirt roads of Route 66.
+        The story of the Bunion Derby teaches us that the roots of ultramarathon running are older and more diverse than most of us realize.
+        This snapshot in time, on the 100th anniversary of Route 66, is a unique opportunity to be a part of history and look back on the 
+        century of change that has shaped our nation and our sport.
+        <br><br>
+        I'd love it if you would run, bike, or walk with me, for one mile or many, to commemorate this once-in-a-century moment -
+        feel free to <a href="#timeline-mobile">join a group run</a> or <a href="#tracking-mobile">track me down</a> at any point between August and November.
+        I hope to see you on the Mother Road!
+      </p>
+      <h1>
+        <a href="https://docs.google.com/document/d/1Wjm-oA5h4PreNbG785iNnUZ4PO-Y-J9WW9hjGexW0NY/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span style="color: blue;">JOIN THE RUN</span></a> 
+        <br>
+        <a href="https://gofund.me/2bcaaac81" target="_blank" rel="noopener noreferrer"><span style="color: black;">SUPPORT THE RUN</span></a>
+        <br>
+        <a href="https://www.instagram.com/zachcfiske/?hl=en" target="_blank" rel="noopener noreferrer"><span style="color: red;">FOLLOW THE RUN</span></a>
+      </h1>
+    </div>
+  </div>
+</div>
+
+<div class="desktop">
+  <section class="image-section"
+  style="
+    --overlay-top: 5%;
+    --overlay-left: 5%;
+    --overlay-width: 65%;
+    --overlay-transform: none;
+    ">
+    <img src="/images/i-route-66/timeline-graphic-tall.png" alt="Timeline of Bunion Derby Commemorative Run">
+    <div class="hero-overlay">
+      <div class="section-text" id="timeline">
+        <h2>The Route</h2>
+        <p>
+          Untangling a modern trace of Route 66 is not straightforward - no single continuous highway ever existed, and the official signage
+          changed many times between 1926 and 1985. In many places old Route 66 has been paved over by interstate (especially I-40), purchased by private 
+          landowners, fenced off to make military bases, or eroded by nature. My journey aims to follow original routing as closely as possible 
+          while staying on legal roads and adjusting for safe traffic conditions (for many remote sections, this means running on frontage roads rather than interstate highways). 
+          There is a well-established cycling route for Route 66 through Illinois, Missouri, Oklahoma, and California, which I plan to follow for much of the journey.
+          Like many transcontinental runners, I'll run mostly self-supported and use a jogging stroller to mule food and water. Thus, by virtue of traveling on foot, 
+          I am also able to explore some rougher historic roads that the cycling route avoids.
+          You can find my full route in this 
+          <a href="https://www.komoot.com/collection/4102908/-route-66" target="_blank" rel="noopener noreferrer">Komoot collection</a>. 
+          </p>
+      </div>
+    </div>
+  </section>
+  <section class="image-section"
+  style="
+    --overlay-top: 2.5%;
+    --overlay-left: 2.5%;
+    --overlay-right: 2.5%;
+    --overlay-bottom: auto;
+    --overlay-width: auto;
+    --overlay-max-width: none;
+    --overlay-max-height: none;
+    --overlay-transform: none;
+    ">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <h1>
+          <a href="https://docs.google.com/document/d/1Wjm-oA5h4PreNbG785iNnUZ4PO-Y-J9WW9hjGexW0NY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">JOIN A GROUP RUN</a> 
+        </h1>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="mobile">
+  <div class="section reverse" id="timeline-mobile">
+    <a href="https://zachfiske.travelmap.net/" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/timeline-graphic.png" alt="Timeline of Bunion Derby Commemorative Run">
+    </a>
+    <div class="section-text">
+      <h2>The Route</h2>
+      <p>
+        Untangling a modern trace of Route 66 is not straightforward - no single continuous highway ever existed, and the official signage
+        changed many times between 1926 and 1985. In many places old Route 66 has been paved over by interstate (especially I-40), purchased by private 
+        landowners, fenced off to make military bases, or eroded by nature. My journey aims to follow original routing as closely as possible 
+        while staying on legal roads and adjusting for safe traffic conditions (for many remote sections, this means running on frontage roads rather than interstate highways). 
+        There is a well-established cycling route for Route 66 through Illinois, Missouri, Oklahoma, and California, which I plan to follow for much of the journey.
+        Like many transcontinental runners, I'll run mostly self-supported and use a jogging stroller to mule food and water. Thus, by virtue of traveling on foot, 
+        I am also able to explore some rougher historic roads that the cycling route avoids.
+        You can find my full route in this 
+        <a href="https://www.komoot.com/collection/4102908/-route-66" target="_blank" rel="noopener noreferrer">Komoot collection</a>. 
+        <br><br>
+        <i>
+          *Asterisks denote a rest day prior to departure.
+          For the most up-to-date information on group runs, please see the google doc below and don't hesitate to 
+          <a href="https://www.zachfiske.com/contact" target="_blank" rel="noopener noreferrer">reach out</a>.
+        </i>
+      </p>
+      <br>
+      <h1>
+        <a href="https://docs.google.com/document/d/1Wjm-oA5h4PreNbG785iNnUZ4PO-Y-J9WW9hjGexW0NY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">JOIN A GROUP RUN</a> 
+      </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="desktop">
+  <section class="image-section"
+  style="
+    --overlay-top: 65%;
+    --overlay-left: 2.5%;
+    --overlay-right: 2.5%;
+    --overlay-bottom: auto;
+    --overlay-width: auto;
+    --overlay-max-width: none;
+    --overlay-transform: none;
+    ">
+    <img src="/images/i-route-66/research-film-webpage.png" alt="" title="">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <p>
+          Biomechanists <a href="https://www.linkedin.com/in/key-nahan-ba0a40129/" target="_blank" rel="noopener noreferrer">Key Nahan</a> and
+          <a href="https://justinmatties.github.io/" target="_blank" rel="noopener noreferrer">Justin Matties</a> 
+          are conducting a novel n=1 study during the Bunion Derby Commemorative Run. Prior ultramarathon fatigue studies have examined athletes before 
+          and after a single event or during relatively short laboratory simulations; there have been no studies reporting day-to-day changes during repeated
+          marathon-distance running. 
+          <br><br>
+          Filmmakers <a href="https://www.sandcastmedia.com/" target="_blank" rel="noopener noreferrer">Justin Clifton</a> and
+          <a href="https://www.mountainfilm.org/people/page-buono/" target="_blank" rel="noopener noreferrer">Page Buono</a> 
+          are bringing the story of the Bunion Derby to life. With nearly one hundred years between the original 1928 race and the Bunion Derby Commemorative Run,
+          these two moments in history bookend a formative century of culture, technology, and sport along Route 66. The film is a
+          unique feet-on-the-ground perspective into the heart of America. 
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="mobile">
+  <div class="section light reverse">
+    <img src="/images/i-route-66/research-film-webpage-short.png" alt="" title="">
+    <div class="section-text">
+      <p>
+          Biomechanists <a href="https://www.linkedin.com/in/key-nahan-ba0a40129/" target="_blank" rel="noopener noreferrer">Key Nahan</a> and
+          <a href="https://justinmatties.github.io/" target="_blank" rel="noopener noreferrer">Justin Matties</a> 
+          are conducting a novel n=1 study during the Bunion Derby Commemorative Run. Prior ultramarathon fatigue studies have examined athletes before 
+          and after a single event or during relatively short laboratory simulations; there have been no studies reporting day-to-day changes during repeated
+          marathon-distance running. 
+          <br><br>
+          Filmmakers <a href="https://www.sandcastmedia.com/" target="_blank" rel="noopener noreferrer">Justin Clifton</a> and
+          <a href="https://www.mountainfilm.org/people/page-buono/" target="_blank" rel="noopener noreferrer">Page Buono</a> 
+          are bringing the story of the Bunion Derby to life. With nearly one hundred years between the original 1928 race and the Bunion Derby Commemorative Run,
+          these two moments in history bookend a formative century of culture, technology, and sport along Route 66. The film is a
+          unique and feet-on-the-ground perspective into the heart of America. 
+      </p>
+    </div>
+  </div>
+</div>
+  
+<div class="desktop">
+  <section class="image-section"
+  style="
+    --overlay-top: 50%;
+    --overlay-left: 5%;
+    --overlay-right: auto;
+    --overlay-bottom: auto;
+    --overlay-width: 55%;
+    --overlay-transform: translateY(-50%);
+    ">
+    <img src="/images/i-ultras/mineral-belt-trail.jpg" alt="Abandoned mine, Mineral Belt Trail, Leadville, CO (Photo credit: Rachel Hurley)" title="Abandoned mine, Mineral Belt Trail, Leadville, CO (Photo credit: Rachel Hurley)" class="flip-horizontal">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <h2>America by Foot</h2>
+        <p>If my previous ultra-distance projects have taught me anything, it's that running is the most intimate 
+          way to travel a landscape. I am drawn to the intensity and vulnerability that go hand-in-hand with self-supported long-distance
+          running; when the effort of movement strips you raw, every pebble underfoot registers vividly in your brain, and every human interaction
+          becomes a core memory. It's not a runner's high - rather, it's the purity of experience that comes from leaving part of yourself out on
+          the trail. 
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="mobile">
+  <div class="section">
+    <img src="/images/i-ultras/mineral-belt-trail.jpg" alt="Abandoned mine, Mineral Belt Trail, Leadville, CO (Photo credit: Rachel Hurley)" title="Abandoned mine, Mineral Belt Trail, Leadville, CO (Photo credit: Rachel Hurley)">
+    <div class="section-text">
+      <h2>America by Foot</h2>
+      <p>If my previous ultra-distance projects have taught me anything, it's that running is the most intimate 
+        way to travel a landscape. I am drawn to the intensity and vulnerability that go hand-in-hand with self-supported long-distance
+        running; when the effort of movement strips you raw, every pebble underfoot registers vividly in your brain, and every human interaction
+        becomes a core memory. It's not a runner's high - rather, it's the purity of experience that comes from leaving part of yourself out on
+        the trail. 
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="desktop">
+  <section class="image-section">
+  <img src="/images/i-route-66/bunion-derby.jpg" alt="Andy Payne in the 1928 Bunion Derby: Williams to Flagstaff, AZ (Public Domain)" title="1928 Bunion Derby: Williams to Flagstaff, AZ (Public Domain)">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <h2>Remembering the Bunion Derby</h2>
+        <p>
+          For the curious ultramarathoner, there is a historic reason to run the length of Route 66: the Bunion Derby. In 1928, fewer than two years after
+          the route was signed into being, 199 men from all over the world lined up in Los Angeles to race across the United States for a $25,000 cash prize - nearly half a million
+          in 2026 dollars. The derby traced the original Route 66 (the official highway was redrawn many times between 1930 and 1980) until Chicago, at 
+          which point the runners and their traveling circus beelined toward New York. Many of the racers were not professional athletes, 
+          let alone runners, yet nevertheless managed to average between 30 and 50 miles per day, every day, sometimes in apocalyptic conditions. 
+          Most modern ultramarathon runners, myself included, tend to think of the 1963 JFK 50 or the 1977 Western States 100 as the genesis of our sport,
+          but in truth its roots are much older and more diverse than this. The Bunion Derby Commemorative Run is an opportunity to retrace the steps of Bunion Derby racers
+          and honor their journey across prohibition-era America.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="mobile">
+  <div class="section light">
+    <img src="/images/i-route-66/bunion-derby.jpg" alt="Andy Payne in the 1928 Bunion Derby: Williams to Flagstaff, AZ (Public Domain)" title="1928 Bunion Derby: Williams to Flagstaff, AZ (Public Domain)">
+    <div class="section-text">
+      <h2>Remembering the Bunion Derby</h2>
+      <p>
+        For the curious ultramarathoner, there is a historic reason to run the length of Route 66: the Bunion Derby. In 1928, fewer than two years after
+        the route was signed into being, 199 men from all over the world lined up in Los Angeles to race across the United States for a $25,000 cash prize - nearly half a million
+        in 2026 dollars. The derby traced the original Route 66 (the official highway was redrawn many times between 1930 and 1980) until Chicago, at 
+        which point the runners and their traveling circus beelined toward New York. Many of the racers were not professional athletes, 
+        let alone runners, yet nevertheless managed to average between 30 and 50 miles per day, every day, sometimes in apocalyptic conditions. 
+        Most modern ultramarathon runners, myself included, tend to think of the 1963 JFK 50 or the 1977 Western States 100 as the genesis of our sport,
+        but in truth its roots are much older and more diverse than this. The Bunion Derby Commemorative Run is an opportunity to retrace the steps of Bunion Derby racers
+        and honor their journey across prohibition-era America.
+      </p>
+    </div>
+  </div>
+</div>
+  
+<div class="desktop">
+  <section class="image-section"
+  style="
+    --overlay-left: 5%;
+    --overlay-right: auto;
+    --overlay-bottom: 5%;
+    --overlay-top: auto;
+    --overlay-width: 60%;
+    --overlay-transform: none;
+    ">
+    <img src="/images/i-route-66/kingman-historic-byway.jpg" alt="Route 66 Historic Back Country Byway near Kingman, AZ (Public Domain)" title="Route 66 Historic Back Country Byway near Kingman, AZ (Public Domain)">
+    <div class="hero-overlay">
+      <div class="section-text">
+        <h2>A Cultural Snapshot - The Route 66 Centennial</h2>
+        <p>
+          At its core, running Route 66 is about choosing to slow down. From pre-Colonial footpaths to the wagon tracks of the Oregon Trail, people have been traversing 
+          America for millennia. In 1926, the unpaved dirt roads of newborn Route 66 signaled a seismic change in human travel, and the birth of
+          a uniquely American obsession with the automobile. In the heyday of the cultural Main Street of America, as Route 66 has been lovingly dubbed,
+          the car was a physical embodiment of Manifest Destiny, a symbol of postwar excess, and a metaphor for freedom itself - capitalism at its finest. No
+          single narrative better explains modern-day America than the history of Route 66. And yet, in three generations, this tarmac artery has all but dried up.
+          By the time Route 66 was decommissioned in 1985, interstates had already paved over many single-lane highways. Today ghost towns line the old
+          road, visited only by bikepackers and misty-eyed motorists, and a flight from Chicago to Los Angeles takes fewer than five hours.
+          The Bunion Derby Commemorative Run invites you to join part of the historic journey under human power, to recognize the rich history of culture and change
+          that Route 66 represents and foster a discussion about the future.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="mobile">
+  <div class="section reverse">
+    <img src="/images/i-route-66/kingman-historic-byway.jpg" alt="Route 66 Historic Back Country Byway near Kingman, AZ (Public Domain)" title="Route 66 Historic Back Country Byway near Kingman, AZ (Public Domain)">
+    <div class="section-text">
+      <h2>A Cultural Snapshot - The Route 66 Centennial</h2>
+      <p>
+        At its core, running Route 66 is about choosing to slow down. From pre-Colonial footpaths to the wagon tracks of the Oregon Trail, people have been traversing 
+        America for millennia. In 1926, the unpaved dirt roads of newborn Route 66 signaled a seismic change in human travel, and the birth of
+        a uniquely American obsession with the automobile. In the heyday of the cultural Main Street of America, as Route 66 has been lovingly dubbed,
+        the car was a physical embodiment of Manifest Destiny, a symbol of postwar excess, and a metaphor for freedom itself - capitalism at its finest. No
+        single narrative better explains modern-day America than the history of Route 66. And yet, in three generations, this tarmac artery has all but dried up.
+        By the time Route 66 was decommissioned in 1985, interstates had already paved over many single-lane highways. Today ghost towns line the old
+        road, visited only by bikepackers and misty-eyed motorists, and a flight from Chicago to Los Angeles takes fewer than five hours.
+        The Bunion Derby Commemorative Run invites you to join part of the historic journey under human power, to recognize the rich history of culture and change
+        that Route 66 represents and foster a discussion about the future.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div 
+  class="section full-text light"
+  style="
+    background: white !important;
+  ">
+  <br><br>
+  <h1>
+    Supporting Partners
+  </h1>
+  <br><br>
+  <div class="partner-grid fade-section">
+    <div class="partner-logo">
+      <a href="https://route66centennial.org/index.php/celebrate/route-66-bunion-derby" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/logos/centennial-logo.png" alt="">
+      </a>
+    </div>
+
+    <div class="partner-logo">
+      <a href="https://www.precisionhydration.com/" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/logos/precision.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="partner-logo">
+      <a href="https://mygreenstamps.com/" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/logos/s-h-green-stamps.jpg" alt="">
+      </a>
+    </div>
+    
+    <div class="partner-logo">
+      <a href="https://www.stryd.com/us/en" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/logos/stryd.png" alt="">
+      </a>
+    </div>
+    
+    <div class="partner-logo">
+      <a href="https://travelmap.net/" target="_blank" rel="noopener noreferrer">
+        <img src="/images/i-route-66/logos/travelmap.png" alt="">
+      </a>
+    </div>
+  </div>
+
+  <hr class="partner-divider">
+  <h1>
+    Community Partners
+  </h1>
+  <br><br>
+
+  <div class="partner-grid smaller fade-section">
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/amarillo-pub-runners.jpg" alt="">
+    </div>
+
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/fleet-feet-bloomington.png" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/fleet-feet-springfield-mo.png" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/kingman-running-club.jpg" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/lake-run-club.png" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/natra.png" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/ozark-mountain-ridge-runners.jpg" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/run-806.jpg" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/run-to-the-pub.png" alt="">
+    </div>
+    
+    <div class="partner-logo">
+      <img src="/images/i-route-66/logos/runwell.png" alt="">
+    </div>
+  </div>
+</div>
+  
+<div class="section full-text">
+  <div class="section-text">
+    <h2 style="text-align: center;">
+      <a href="https://www.zachfiske.com/washington" rel="noopener noreferrer">
+        <span style="color: white;">
+          Read about my previous adventures
+        </span>
+      </a>
+    </h2>
+  </div>
+</div>
+  
+<div class="page-banner banner-auto">
+  <img src="/images/i-route-66/amboy-crater.jpg" alt="" title="Amboy Crater, CA, on Route 66 (Public Domain)">
+</div>
+</main>
+  
+<div id="footer"></div>
+  
+<script src="/js/main.js" defer></script>
+
+</body>
+</html>
